@@ -1,32 +1,28 @@
 import { useEffect, useState, useCallback } from "react";
 import { useInView } from 'react-intersection-observer';
-import { aws, bash, bootstrap, cloudinary, css, figma, gcp, git, github, html, javascript, nodeJs, postgresql, python, react, ror, ruby, sass, sql, stripe, typescript, ubuntu, webpack } from '../assets/images/icons';
+import { aws, bootstrap, css, gcp, git, html, javascript, nodeJs, postgresql, python, react, ror, ruby, sass, sql, typescript } from '../assets/images/icons';
 
-const iconColors = [
+const iconColorsGrid1 = [
   { icon: html, color: '#f16529' },        // HTML - Orange
   { icon: javascript, color: '#F7DF1E' },  // JavaScript - Yellow
-  { icon: nodeJs, color: '#83cd29' },      // Node.js - Green
-  { icon: python, color: 'whitesmoke' },      // Python - Blue
+  { icon: nodeJs, color: '#8cc84b' },      // Node.js - Green
+  { icon: python, color: '#dfe2dc' },      // Python - Blue
   { icon: css, color: '#0295de' },         // CSS - Blue
   { icon: react, color: '#61DAFB' },       // React - Cyan
   { icon: ror, color: 'black' },         // Ruby on Rails - Red
   { icon: ruby, color: '#ba0f01' },        // Ruby - Red
-  { icon: postgresql, color: '#336791' },  // PostgreSQL - Blue
+]
+
+const iconColorsGrid2 = [
+   { icon: postgresql, color: '#336791' },  // PostgreSQL - Blue
   { icon: typescript, color: '#3178c6' },  // TypeScript - Blue
-  { icon: sql, color: '#F29111' },         // SQL - Orange
+  { icon: sql, color: 'black' },         // SQL - Orange
   { icon: aws, color: '#FF9900' },         // AWS - Orange
-  { icon: bash, color: '#4EAA25' },        // Bash - Green
   { icon: bootstrap, color: '#7952B3' },   // Bootstrap - Purple
-  { icon: cloudinary, color: '#FEC108' },  // Cloudinary - Yellow
-  { icon: github, color: '#181717' },      // GitHub - Black
-  { icon: figma, color: '#A259FF' },       // Figma - Purple
-  { icon: gcp, color: '#4285F4' },         // GCP - Blue
+  { icon: gcp, color: '#dfe2dc' },         // GCP - Blue
   { icon: git, color: '#F05032' },         // Git - Red
   { icon: sass, color: '#CC6699' },        // Sass - Pink
-  { icon: stripe, color: '#635bff' },      // Stripe - violet
-  { icon: ubuntu, color: '#E95420' },      // Ubuntu - Orange
-  { icon: webpack, color: '#8DD6F9' }      // Webpack - Light Blue
-];
+]
 
 // Object mapping grid item keys to their positions
 const gridReferences: { [key: string]: number[] } = {
@@ -95,11 +91,25 @@ const calculateOffsets = (emptyCellPos: CellPosition, selectedCell: CellPosition
 // Component function
 export default function GridComponent() {
   const { ref, inView } = useInView();
-  const [emptyCellPos, setEmptyCellPos] = useState<{ row: number; col: number }>({ row: 3, col: 3 });
-  const [lastMovedCell, setLastMovedCell] = useState<{ row: number; col: number }>({ row: 3, col: 3 });
+
+  // State for grid-1
+  const [emptyCellPos1, setEmptyCellPos1] = useState<CellPosition>({ row: 3, col: 3 });
+  const [lastMovedCell1, setLastMovedCell1] = useState<CellPosition>({ row: 3, col: 3 });
+
+  // State for grid-2
+  const [emptyCellPos2, setEmptyCellPos2] = useState<CellPosition>({ row: 3, col: 3 });
+  const [lastMovedCell2, setLastMovedCell2] = useState<CellPosition>({ row: 3, col: 3 });
 
   // Function to move a cell randomly
-  const moveCell = useCallback(() => {
+  const moveCell = useCallback((gridContainer: number) => {
+     // Determine which grid-container to use based on argument
+     const containerClassName = gridContainer === 1 ? ".grid-1" : ".grid-2";
+     const emptyCellPos = gridContainer === 1 ? emptyCellPos1 : emptyCellPos2;
+    const setEmptyCellPos = gridContainer === 1 ? setEmptyCellPos1 : setEmptyCellPos2;
+    const lastMovedCell = gridContainer === 1 ? lastMovedCell1 : lastMovedCell2;
+    const setLastMovedCell = gridContainer === 1 ? setLastMovedCell1 : setLastMovedCell2;
+
+
     // Find adjacent cells to the empty cell and filter out the last moved cell
     const adjacentCells = findAdjacentCells(emptyCellPos.row, emptyCellPos.col)
       .filter(cell => !(
@@ -123,7 +133,7 @@ export default function GridComponent() {
     );
 
     // Find the HTML element corresponding to the cell
-    const cellElement = document.querySelector(`.grid-item-${keyToMove}`) as HTMLElement | null;
+    const cellElement = document.querySelector(`${containerClassName} .grid-item-${keyToMove}`) as HTMLElement | null;
     if (!cellElement) return;
 
     // Check if cellElement is an instance of HTMLElement
@@ -159,13 +169,16 @@ export default function GridComponent() {
       throw new Error('cellElement must be an HTMLElement');
     }
 
-  }, [emptyCellPos, lastMovedCell]);
+  }, [emptyCellPos1, emptyCellPos2, lastMovedCell1, lastMovedCell2]);
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout;
 
     const handleGridContainerInView = () => {
-      intervalId = setInterval(moveCell, 1000); // Start the interval
+      intervalId = setInterval(() => {
+        moveCell(1); // Start the interval for the first grid-container
+        moveCell(2); // Start the interval for the second grid-container
+      }, 1000);
     };
 
     const handleGridContainerNotInView = () => {
@@ -198,19 +211,21 @@ export default function GridComponent() {
 
   // Render the grid items
   return (
-    <section className="moving-cells">
-      <h2>Stack technologique</h2>
-      <div ref={ref} className="grid-container">
+    <section className="grids">
+      <div ref={ref} className="grid-container grid-1">
         {positions.map((pos, index) => (
-          <div key={index} className={`cell grid-item-${index+1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: iconColors[index].color}}>
-            <img src={iconColors[index].icon} alt={`icon-${index+1}`} className="icon"/>
+          <div key={index} className={`grid-item grid-item-${index+1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: iconColorsGrid1[index].color }}>
+            <img src={iconColorsGrid1[index].icon} alt={`icon-${index+1}`} className="icon"/>
           </div>
         ))}
       </div>
-      <div ref={ref} className="grid-container">
+      <div className="grid-empty" style={{backgroundColor: "black"}}>
+        <h3>Stack technologique</h3>
+      </div>
+      <div ref={ref} className="grid-container grid-2">
         {positions.map((pos, index) => (
-          <div key={index} className={`cell grid-item-${index+1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: iconColors[index].color}}>
-            <img src={iconColors[index].icon} alt={`icon-${index+1}`} className="icon"/>
+          <div key={index} className={`grid-item grid-item-${index+1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: iconColorsGrid2[index].color }}>
+            <img src={iconColorsGrid2[index].icon} alt={`icon-${index+1}`} className="icon"/>
           </div>
         ))}
       </div>

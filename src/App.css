@@ -1,54 +1,68 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* normalize css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
-*,*:after,*:before{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+*, ::before, ::after {
   box-sizing: border-box;
-  margin: 0;
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+body {
+	line-height: 1;
+  text-align: center;
+  font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: whitesmoke;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+
+
+/* global css */
 
 main {
   margin: 2rem 0;
@@ -66,31 +80,52 @@ h2 {
   font-size: 2rem;
 }
 
-.moving-cells {
+.grids {
   max-width: 100%;
   display: flex;
+  justify-content:space-around;
+}
+
+.grids > div {
+  width: 30%;
+  margin: 1rem 0;
+}
+
+.grid-empty {
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+  display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
-.grid-container {
-  margin: 2rem 0;
-  display: grid;
-  grid-template-columns: repeat(3, 100px); /* Crée 3 colonnes de largeur égale */
-  grid-template-rows: repeat(3, 100px); /* Crée 3 lignes de hauteur fixe à 100px */
-  gap: 12px; /* Espacement entre les éléments de la grille */
+.grid-empty h3 {
+  text-align: center;
+  font-size: 75%;
+  max-width: 100%;
 }
 
-.cell {
-  padding: 20px;
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(3, 30%);
+  gap: 5%;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12%;
   text-align: center;
   border-radius: 5px;
-  color: white;
   font-size: 2rem;
+  position: relative;
 }
 
-.moving-cells .icon {
-  width:90%;
+.grid-item > img {
+  width: 85%;
   height: auto;
 }
