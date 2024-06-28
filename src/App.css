@@ -141,15 +141,20 @@ h2 {
 /* Projet component */
 
 article.project {
+  text-align: justify;
   display: flex;
   flex-direction: column;
+}
+
+article.project h2 {
+  text-align: center;
 }
 
 ul.list-tech-stack {
   display: flex;
   flex-wrap:wrap;
   justify-content: space-around;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 ul.list-tech-stack li {
@@ -160,10 +165,19 @@ ul.list-tech-stack li {
   margin: 0.3rem;
 }
 
+h3 {
+  font-weight: bold;
+}
+
+ul.features {
+  list-style-type: circle;
+  margin-left: 2rem;
+}
 /* ImageLayout.css */
+/*
 .image-layout {
   display: none;
-  grid-template-columns: 325px 275px; /* Une colonne de 200 pixels et une colonne de 100 pixels */
+  grid-template-columns: 325px 275px;
   grid-template-rows: 300px;
   gap: 10px;
 }
@@ -195,7 +209,11 @@ ul.list-tech-stack li {
   height: 100%;
   object-fit: cover;
 }
+*/
 
+.image {
+  width: 100%;
+}
 
 
 @media screen and (min-width: 1024px){
@@ -212,7 +230,7 @@ ul.list-tech-stack li {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    border: 3px solid green;
+    /* border: 3px solid green; */
   }
 
   h2 {
@@ -220,14 +238,14 @@ ul.list-tech-stack li {
   }
 
   .description{
-    width: 35%;
-    border: 3px solid yellow;
+    width: 55%;
+    /* border: 3px solid yellow; */
   }
 
   .image-layout {
-    width: 60%;
-    display: grid;
-    border: 3px solid red;
+    width: 35%;
+    /* display: grid; */
+    /* border: 3px solid red; */
   }
 
 }
