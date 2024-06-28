@@ -17,7 +17,7 @@ const iconColorsGrid2 = [
    { icon: postgresql, color: '#336791' },  // PostgreSQL - Blue
   { icon: typescript, color: '#3178c6' },  // TypeScript - Blue
   { icon: sql, color: 'black' },         // SQL - Orange
-  { icon: aws, color: '#FF9900' },         // AWS - Orange
+  { icon: aws, color: '#f79400' },         // AWS - Orange
   { icon: bootstrap, color: '#7952B3' },   // Bootstrap - Purple
   { icon: gcp, color: '#dfe2dc' },         // GCP - Blue
   { icon: git, color: '#F05032' },         // Git - Red
@@ -148,7 +148,7 @@ export default function GridComponent() {
           { transform: `translate3d(${colOffset}px, ${rowOffset}px, 0)` } // End of animation: move to target position
         ],
         {
-          duration: 500,
+          duration: 300,
           easing: 'linear' // Linear animation
         }
       ).onfinish = () => {

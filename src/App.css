@@ -34,7 +34,9 @@ body {
 	line-height: 1;
   text-align: center;
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: whitesmoke;
+  background-color: #012b5b;
+  color: whitesmoke;
+  word-break: break-word;
 }
 
 ol, ul {
@@ -63,15 +65,10 @@ button, a {
 
 
 /* global css */
-
-main {
-  margin: 2rem 0;
-}
-
 h1 {
   text-align: center;
-  font-size: 2rem;
-  margin: 5rem 0;
+  font-size: 1.5rem;
+  margin: 2rem 0;
 }
 
 h2 {
@@ -81,9 +78,11 @@ h2 {
 }
 
 .grids {
-  max-width: 100%;
+  width: 100%;
   display: flex;
   justify-content:space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .grids > div {
@@ -102,8 +101,9 @@ h2 {
 
 .grid-empty h3 {
   text-align: center;
-  font-size: 75%;
-  max-width: 100%;
+  font-size: 0.9rem;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .grid-container {
@@ -123,9 +123,22 @@ h2 {
   border-radius: 5px;
   font-size: 2rem;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .grid-item > img {
-  width: 85%;
-  height: auto;
+  width: 95%;
+  height: 95%;
+}
+
+
+@media screen and (min-width: 1024px){
+  .grids {
+    max-width: 75%;
+  }
+
+  .grid-empty h3 {
+    font-size: 2rem;
+  }
+
 }
