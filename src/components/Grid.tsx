@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useState, useCallback } from "react";
 import { useInView } from 'react-intersection-observer';
 
@@ -124,7 +123,7 @@ export default function GridComponent() {
           { transform: `translate3d(${colOffset}px, ${rowOffset}px, 0)` } // End of animation: move to target position
         ],
         {
-          duration: 1000,
+          duration: 500,
           easing: 'linear' // Linear animation
         }
       ).onfinish = () => {
@@ -151,7 +150,7 @@ export default function GridComponent() {
     let intervalId: NodeJS.Timeout;
 
     const handleGridContainerInView = () => {
-      intervalId = setInterval(moveCell, 3000); // Start the interval
+      intervalId = setInterval(moveCell, 1000); // Start the interval
     };
 
     const handleGridContainerNotInView = () => {
@@ -159,14 +158,26 @@ export default function GridComponent() {
     };
 
     // Check if the grid container is in view
-    if (inView) {
+    if (inView && document.visibilityState === 'visible') {
       handleGridContainerInView();
     } else {
       handleGridContainerNotInView();
     }
 
+    // Handle visibility change event
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        handleGridContainerInView();
+      } else {
+        handleGridContainerNotInView();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
     return () => {
       clearInterval(intervalId); // Clean up the interval on component unmount
+      document.removeEventListener('visibilitychange', handleVisibilityChange); // Remove event listener
     };
   }, [inView, moveCell]);
 
@@ -176,9 +187,9 @@ export default function GridComponent() {
       <h2>Moving cells</h2>
       <div ref={ref} className="grid-container">
         {positions.map((pos, index) => (
-            <div key={index} className={`cell grid-item-${index+1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: colors[index] }}>
-              {pos.index + 1}
-            </div>
+          <div key={index} className={`cell grid-item-${index + 1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: colors[index] }}>
+            {pos.index + 1}
+          </div>
         ))}
       </div>
     </section>
