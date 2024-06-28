@@ -36,7 +36,7 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, description, technolo
         </div> */}
         <img className="image" src={images[0]}/>
       </div>
-
+      <hr />
     </article>
   )
 }

@@ -215,6 +215,9 @@ ul.features {
   width: 100%;
 }
 
+hr {
+  margin: 2rem 0;
+}
 
 @media screen and (min-width: 1024px){
   .grids {
