@@ -1,16 +1,31 @@
 import { useEffect, useState, useCallback } from "react";
 import { useInView } from 'react-intersection-observer';
+import { aws, bash, bootstrap, cloudinary, css, figma, gcp, git, github, html, javascript, nodeJs, postgresql, python, react, ror, ruby, sass, sql, stripe, typescript, ubuntu, webpack } from '../assets/images/icons';
 
-// Array of colors for grid items
-const colors: string[] = [
-  '#FFC0CB', // Pink
-  '#FF69B4', // Hot pink
-  '#FF1493', // Deep pink
-  '#C71585', // Medium violet red
-  '#DB7093', // Pale violet red
-  '#DC143C', // Crimson
-  '#B22222', // Fire brick
-  '#8B0000', // Dark red
+const iconColors = [
+  { icon: html, color: '#f16529' },        // HTML - Orange
+  { icon: javascript, color: '#F7DF1E' },  // JavaScript - Yellow
+  { icon: nodeJs, color: '#83cd29' },      // Node.js - Green
+  { icon: python, color: 'whitesmoke' },      // Python - Blue
+  { icon: css, color: '#0295de' },         // CSS - Blue
+  { icon: react, color: '#61DAFB' },       // React - Cyan
+  { icon: ror, color: 'black' },         // Ruby on Rails - Red
+  { icon: ruby, color: '#ba0f01' },        // Ruby - Red
+  { icon: postgresql, color: '#336791' },  // PostgreSQL - Blue
+  { icon: typescript, color: '#3178c6' },  // TypeScript - Blue
+  { icon: sql, color: '#F29111' },         // SQL - Orange
+  { icon: aws, color: '#FF9900' },         // AWS - Orange
+  { icon: bash, color: '#4EAA25' },        // Bash - Green
+  { icon: bootstrap, color: '#7952B3' },   // Bootstrap - Purple
+  { icon: cloudinary, color: '#FEC108' },  // Cloudinary - Yellow
+  { icon: github, color: '#181717' },      // GitHub - Black
+  { icon: figma, color: '#A259FF' },       // Figma - Purple
+  { icon: gcp, color: '#4285F4' },         // GCP - Blue
+  { icon: git, color: '#F05032' },         // Git - Red
+  { icon: sass, color: '#CC6699' },        // Sass - Pink
+  { icon: stripe, color: '#635bff' },      // Stripe - violet
+  { icon: ubuntu, color: '#E95420' },      // Ubuntu - Orange
+  { icon: webpack, color: '#8DD6F9' }      // Webpack - Light Blue
 ];
 
 // Object mapping grid item keys to their positions
@@ -184,11 +199,18 @@ export default function GridComponent() {
   // Render the grid items
   return (
     <section className="moving-cells">
-      <h2>Moving cells</h2>
+      <h2>Stack technologique</h2>
       <div ref={ref} className="grid-container">
         {positions.map((pos, index) => (
-          <div key={index} className={`cell grid-item-${index + 1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: colors[index] }}>
-            {pos.index + 1}
+          <div key={index} className={`cell grid-item-${index+1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: iconColors[index].color}}>
+            <img src={iconColors[index].icon} alt={`icon-${index+1}`} className="icon"/>
+          </div>
+        ))}
+      </div>
+      <div ref={ref} className="grid-container">
+        {positions.map((pos, index) => (
+          <div key={index} className={`cell grid-item-${index+1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: iconColors[index].color}}>
+            <img src={iconColors[index].icon} alt={`icon-${index+1}`} className="icon"/>
           </div>
         ))}
       </div>
