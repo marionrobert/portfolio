@@ -1,5 +1,5 @@
 import Project from "./Project";
-import { harmony1, harmony2, harmony3, verdure1, verdure2, verdure3, synopsix1, synopsix2, synopsix3, waw, waw1, waw2, waw3, guitarpick1, guitarpick2, guitarpick3 } from "../assets/images/projects";
+import { harmony2, verdure2, synopsix1, waw, guitarpick1 } from "../assets/images/projects";
 
 
 const projects = [
@@ -8,8 +8,7 @@ const projects = [
     description: "Harmony est né du constat que les personnes bénéficiant d'une protection internationale rencontrent des difficultés d'intégration en France. Notre projet vise à faciliter leur inclusion à l'échelle locale en encourageant les interactions et la solidarité entre voisins. Sur notre plateforme, vous pouvez proposer ou réserver des activités pour échanger des services. Chaque coup de main donné vous permet d'accumuler des points utilisables pour recevoir de l'aide à votre tour.",
     technologies: [
       'JavaScript',
-      'NodeJS',
-      'Express',
+      'NodeJS / Express.js',
       'React',
       'SQL / MySQL',
       'Redux',
@@ -20,14 +19,12 @@ const projects = [
     ],
     features: [
       'Gestion des sessions utilisateurs',
-      'Gestion du panier',
-      'Filtrage des activités disponibles',
-      'Réservation d\'une activité',
+      'Recherche des activités disponibles par filtres',
       'Vérification des points nécessaires à la réservation',
       'Modération des activités et commentaires par un administrateur',
       "Notification de l'utilisateur par emails"
     ],
-    images: [harmony1, harmony2, harmony3],
+    image: harmony2,
     link: "https://github.com/marionrobert/harmony-front-react"
   },
   {
@@ -35,8 +32,7 @@ const projects = [
     description: "Verdure est une application web de vente en ligne de plantes d'intérieur. L'application est disponible uniquement en français.",
     technologies: [
       'JavaScript',
-      'NodeJS',
-      'Express',
+      'NodeJS / Express.js',
       'React',
       'SQL / MySQL',
       'Redux',
@@ -50,10 +46,9 @@ const projects = [
       'Gestion du panier',
       'Gestion du paiement avec stripe',
       'Dashboard administrateur',
-      'Modération des activités et commentaires par un administrateur',
       "Suivi de l'état commandes"
     ],
-    images: [verdure1, verdure2, verdure3],
+    image: verdure2,
     link: "https://github.com/marionrobert/verdure-front-react"
   },
   {
@@ -70,12 +65,11 @@ const projects = [
     features: [
       'Gestion des sessions utilisateurs',
       'Gestion du panier',
-      'Gestion du paiement avec stripe',
       'Dashboard administrateur',
       'Modération des activités et commentaires par un administrateur',
       "Suivi de l'état commandes"
     ],
-    images: [synopsix1, synopsix2, synopsix3],
+    image: synopsix1,
     link: "https://github.com/marionrobert/synopsix-940"
   },
   {
@@ -97,7 +91,7 @@ const projects = [
       'Modération des activités et commentaires par un administrateur',
       "Suivi de l'état commandes"
     ],
-    images: [guitarpick1, guitarpick2, guitarpick3],
+    image: guitarpick1,
     link: "https://github.com/marionrobert/GUITAR_PICK"
   },
   {
@@ -116,10 +110,8 @@ const projects = [
       "Ransack"
     ],
     features: [
-      "CRUD Complet",
       "Hébergement d'images dans le cloud",
       "Authentification (notamment via OmniAuth Google Facebook)",
-      "Stripe",
       "Barre de recherche",
       "Tableau de bord administrateur",
       "Formulaire de contact",
@@ -128,14 +120,14 @@ const projects = [
       "Gestion du panier",
       "Interface de paiement externalisé avec stripe"
     ],
-    images: [waw],
+    image: [waw],
     link: "https://github.com/marionrobert/GUITAR_PICK"
   }
 ]
 
 export default function ProjectsContainer() {
   return (
-    <>
+    <section className="projects-container">
       <h2>Mes projets</h2>
       {projects.map((project, index) => (
         <Project
@@ -144,10 +136,10 @@ export default function ProjectsContainer() {
           description={project.description}
           technologies={project.technologies}
           features={project.features}
-          images={project.images}
+          image={project.image}
           link={project.link}
         />
       ))}
-    </>
+    </section>
   )
 }

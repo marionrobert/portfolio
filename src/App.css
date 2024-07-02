@@ -29,12 +29,17 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
 
 body {
+  font-size: 1rem;;
 	line-height: 1;
   text-align: center;
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #012b5b;
+  background-color:rgba(1, 43, 91, 1);
   color: whitesmoke;
   word-break: break-word;
 }
@@ -60,25 +65,27 @@ table {
 
 button, a {
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 
 
 /* global css */
 main {
-  padding: 1rem 0.5rem;
+  padding: 1rem;
 }
 
 h1 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin: 2rem 0;
 }
 
 h2 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 2rem 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .grids {
@@ -101,12 +108,12 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0.1rem;
 }
 
 .grid-empty h3 {
   text-align: center;
-  font-size: 0.9rem;
-  width: 95%;
+  font-size: 0.89rem;
   margin: 0 auto;
 }
 
@@ -136,42 +143,54 @@ h2 {
 }
 
 
-
-
 /* Projet component */
+
+section.projects-container {
+  margin: 1rem auto;
+}
 
 article.project {
   text-align: justify;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  margin: 2rem 0;
+  padding: 1.5rem 0.5rem;
+  background: rgba(1, 43, 91, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-article.project h2 {
+article.project h3 {
   text-align: center;
 }
 
 ul.list-tech-stack {
   display: flex;
   flex-wrap:wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin: 1rem 0;
 }
 
 ul.list-tech-stack li {
   background-color: black;
   color: white;
-  padding: 0.5rem;
+  padding: 0.7rem;
   border-radius: 5px;
   margin: 0.3rem;
 }
 
 h3 {
   font-weight: bold;
+  margin: 2rem 1rem;
+  font-size: 1.5rem;;
 }
 
 ul.features {
   list-style-type: circle;
-  margin-left: 2rem;
+  margin-left: 2.5rem;
 }
 /* ImageLayout.css */
 /*
@@ -211,42 +230,134 @@ ul.features {
 }
 */
 
+.description, .image-layout{
+  width: 97%;
+}
+
+
+.description a{
+  display: block;
+  width: 120px;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  margin: 1rem auto !important;
+  background: rgba(0,0,0,0.09);
+}
+span{
+  display: block;
+  background-color: black;
+  text-align: center;
+  padding: 0.7rem;
+  border-radius: 5px;
+}
+span:hover {
+  background-color: rgba(1, 43, 91, 0.5);
+}
+.description a::before, .description a::after{
+  content:"";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.3s linear;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+span::before, span::after{
+  content:"";
+  width:2px;
+  height:0;
+  position: absolute;
+  transition: all 0.3s linear;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+.description a:hover::before, .description a:hover::after{
+  width: 100%;
+}
+.description a:hover span::before, .description a:hover span::after{
+  height: 100%;
+}
+
+.button::before{
+  left: 50%;
+  top: 0;
+  transition-duration: 0.4s;
+}
+.button::after{
+  left: 50%;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.button span::before{
+  left: 0;
+  top: 50%;
+  transition-duration: 0.4s;
+}
+.button span::after{
+  right: 0;
+  top: 50%;
+  transition-duration: 0.4s;
+}
+.button:hover::before, .button:hover::after{
+  left: 0;
+}
+.button:hover span::before, .button:hover span::after{
+  top: 0;
+}
+
+
+
+
+
+
+
 .image {
   width: 100%;
+  border-radius: 5px;
 }
 
 hr {
   margin: 2rem 0;
 }
 
+@media screen and (min-width: 768px){
+  .grid-empty h3{
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (min-width: 1024px){
   .grids {
-    max-width: 75%;
+    max-width: 80%;
   }
 
   .grid-empty h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+  }
+
+  section.projects-container {
+    max-width: 95%;
   }
 
   article.project {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    /* border: 3px solid green; */
+    justify-content: space-evenly;
   }
 
-  h2 {
+  h3 {
     width: 100%;
   }
 
   .description{
-    width: 55%;
+    width: 47%;
     /* border: 3px solid yellow; */
   }
 
   .image-layout {
-    width: 35%;
+    width: 47%;
     /* display: grid; */
     /* border: 3px solid red; */
   }
