@@ -88,7 +88,7 @@ h1 {
 
 h2 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   font-size: 2rem;
 }
 
@@ -105,7 +105,7 @@ hr {
   border: none;
   height: 1px;
   background-image: linear-gradient(to right, #f0f0f0, #8f8f8f, #f0f0f0);
-  width: 60%;;
+  width: 70%;;
   margin: 4rem auto;
 }
 
@@ -231,7 +231,7 @@ ul.features {
   background: none;
   border: none;
   color: #fff;
-  margin: 1rem auto !important;
+  margin: 2rem auto 0 !important;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
 }
@@ -332,7 +332,7 @@ section#contact li svg {
   width: 30%;
   height: 100%;
   border-radius: 28px;
-  background: rgba(255, 171, 157, 0.5);
+  background: rgba(255, 171, 157, 0.8);
   z-index: -1;
   transition: all 0.3s ease;
 }
@@ -340,7 +340,7 @@ section#contact li svg {
   width: 100%;
   border-radius: 0; /* Pour éviter de garder le bord arrondi quand l'effet est appliqué */
   height: 100%;
-  background: rgba(255, 171, 157, 0.8);
+  background: rgba(255, 171, 157, 0.95);
   border-radius: 25px;
 }
 
@@ -366,17 +366,65 @@ section#contact li svg {
 }
 
 
+footer {
+  padding: 1rem;
+  background-color: rgba(33, 37, 41, 1);
+}
 
+footer > * {
+  margin: 1.5rem 0;
+}
+
+p.brand{
+  width: 50px;
+  padding: 0.75rem;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: rgba(255, 171, 157, 1) 1px solid;
+  margin: 0 auto;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer .icon {
+  height: 25px;
+  color: rgba(255, 171, 157, 0.8);
+  padding: 0.5rem;
+}
+
+footer .icon:hover {
+  color: rgba(255, 171, 157, 0.5);
+}
+
+
+/* media queries */
 
 @media screen and (min-width: 768px){
   .grid-empty h3{
     font-size: 1.2rem;
   }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  footer > * {
+    width: 15%;
+  }
+
+
+
 }
 
 @media screen and (min-width: 1024px){
   .grids {
-    max-width: 75%;
+    max-width: 80%;
   }
 
   .grid-empty h3 {
@@ -384,7 +432,7 @@ section#contact li svg {
   }
 
   section.projects-container {
-    max-width: 95%;
+    max-width: 80%;
   }
 
   article.project {
