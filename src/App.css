@@ -73,7 +73,7 @@ button, a {
 
 /* global css */
 main {
-  padding: 1rem;
+  padding: 3rem 1rem;
 }
 
 h1 {
@@ -87,6 +87,7 @@ h2 {
   margin: 2rem 0;
   font-size: 1.5rem;
 }
+
 
 .grids {
   width: 100%;
@@ -249,7 +250,7 @@ ul.features {
   margin: 1rem auto !important;
   background: rgba(0,0,0,0.09);
 }
-span{
+.description span{
   display: block;
   background-color: black;
   text-align: center;

@@ -9,7 +9,7 @@ interface ProjectProps {
 
 const ProjectComponent: React.FC<ProjectProps> = ({ title, description, technologies, features, image, link }) => {
   return (
-    <article className="project">
+    <article className="project" id={title}>
       <h3>{title}</h3>
       <div className="description">
         <p>{description}</p>

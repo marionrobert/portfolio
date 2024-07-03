@@ -1,0 +1,36 @@
+import CV from "../assets/CV-Marion-Robert_Dev-Fullstack(FR).pdf";
+
+export default function GridComponent() {
+  return (
+    <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div className="container-fluid">
+        <a className="navbar-brand mb-0 h1" href="#">MR</a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a className="nav-link" href={CV} download="CV_MarionRobert.pdf">Mon CV</a>
+            </li>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mes projets
+              </a>
+              <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a className="dropdown-item" href="#Harmony">Harmony</a></li>
+                <li><a className="dropdown-item" href="#Verdure">Verdure</a></li>
+                <li><a className="dropdown-item" href="#Synopsix">Synopsix</a></li>
+                <li><a className="dropdown-item" href="#GuitarPick">GuitarPick</a></li>
+                <li><a className="dropdown-item" href="#Wall Art Works">Wall Art Works</a></li>
+              </ul>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    )
+}
