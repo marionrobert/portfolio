@@ -5,7 +5,7 @@ function App() {
 
   return (
     <main>
-      <h1>Bienvenue sur le portfolio de Marion Robert</h1>
+      <h1>Bienvenue sur mon portfolio</h1>
       <GridComponent />
       <ProjectsContainer />
     </main>
