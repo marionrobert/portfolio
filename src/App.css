@@ -39,7 +39,7 @@ body {
 	line-height: 1;
   text-align: center;
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color:rgb(0, 26, 56);
+  background-color:rgb(24, 66, 114);
   color: whitesmoke;
   word-break: break-word;
 }
@@ -134,7 +134,7 @@ h2 {
   border-radius: 5px;
   font-size: 2rem;
   position: relative;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .grid-item > img {
@@ -149,8 +149,6 @@ section.projects-container {
   margin: 1rem auto;
 }
 
-
-
 article.project {
   text-align: justify;
   display: flex;
@@ -158,21 +156,28 @@ article.project {
   align-items: center;
   flex-wrap: wrap;
   border-radius: 20px;
-  margin: 2rem 0;
-  padding: 1.5rem 0.5rem;
-  backdrop-filter: blur(10px); /* Effet de flou pour simuler la transparence */
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
-  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
-  /* box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em; */
-  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
-
+  margin: 3rem 0;
+  padding: 2.5rem 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  backdrop-filter: blur(1.4px);
+  -webkit-backdrop-filter: blur(1.4px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 article.project h3 {
   text-align: center;
+  font-weight: bold;
+  margin-bottom: 2.3rem;
+  font-size: 1.7rem;
 }
+
+article.project h4 {
+  font-weight: bold;
+  margin: 1.5rem 0 0.5rem;
+}
+
 
 ul.list-tech-stack {
   display: flex;
@@ -187,12 +192,6 @@ ul.list-tech-stack li {
   padding: 0.7rem;
   border-radius: 5px;
   margin: 0.3rem;
-}
-
-h3 {
-  font-weight: bold;
-  margin: 2rem 1rem;
-  font-size: 1.5rem;;
 }
 
 ul.features {
@@ -315,11 +314,6 @@ span::before, span::after{
 }
 
 
-
-
-
-
-
 .image {
   width: 100%;
   border-radius: 5px;
@@ -359,12 +353,12 @@ hr {
   }
 
   .description{
-    width: 47%;
+    width: 45%;
     /* border: 3px solid yellow; */
   }
 
   .image-layout {
-    width: 47%;
+    width: 45%;
     /* display: grid; */
     /* border: 3px solid red; */
   }

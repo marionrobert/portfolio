@@ -5,7 +5,7 @@ import { harmony2, verdure2, synopsix1, waw, guitarpick1 } from "../assets/image
 const projects = [
   {
     title: "Harmony",
-    description: "Harmony est né du constat que les personnes bénéficiant d'une protection internationale rencontrent des difficultés d'intégration en France. Notre projet vise à faciliter leur inclusion à l'échelle locale en encourageant les interactions et la solidarité entre voisins. Sur notre plateforme, vous pouvez proposer ou réserver des activités pour échanger des services. Chaque coup de main donné vous permet d'accumuler des points utilisables pour recevoir de l'aide à votre tour.",
+    description: "Harmony vise à faciliter l'intégration des bénéficiaires de protection internationale en France en encourageant les interactions et la solidarité entre voisins. Sur notre plateforme, vous pouvez proposer ou réserver des activités pour échanger des services. Chaque coup de main donné vous permet d'accumuler des points pour recevoir de l'aide à votre tour.",
     technologies: [
       'JavaScript',
       'NodeJS / Express.js',
@@ -53,7 +53,7 @@ const projects = [
   },
   {
     title: "Synopsix",
-    description: "Synopsix est une appplication web proposant un jeu autour de l'univers du cinéma, développé sur le modèle de Pédantix. Le but du jeu est de retrouver le titre du film en découvrant peu à peu le synopsix de ce dernier. Deux modes sont possible. Le mode classique (Play word search / input mode) : il s'agit d'entrer des mots pour découvrir progressivement le synopsix. Lle mode contre la montre (Play Against Time / timer mode) : vous avez deux minutes pour retrouver le titre du film dont les mots du synopsix apparaissent progressivement.",
+    description: "Synopsix est une application web de jeu cinématographique inspirée de Pédantix. Le but est de retrouver le titre du film en découvrant son synopsis progressivement. Deux modes sont disponibles : le mode classique où vous entrez des mots pour révéler le synopsis, et le mode contre la montre où vous avez deux minutes pour deviner le titre alors que les mots du synopsis apparaissent peu à peu.",
     technologies: [
       'Ruby',
       'Rails',
@@ -85,11 +85,10 @@ const projects = [
     ],
     features: [
       'Gestion des sessions utilisateurs',
-      'Gestion du panier',
+      'Géolocalisation',
       'Gestion du paiement avec stripe',
-      'Dashboard administrateur',
-      'Modération des activités et commentaires par un administrateur',
-      "Suivi de l'état commandes"
+      'Dashboard utilisateur',
+      "Hébergement d'images dans le cloud"
     ],
     image: guitarpick1,
     link: "https://github.com/marionrobert/GUITAR_PICK"
@@ -110,12 +109,9 @@ const projects = [
       "Ransack"
     ],
     features: [
-      "Hébergement d'images dans le cloud",
       "Authentification (notamment via OmniAuth Google Facebook)",
       "Barre de recherche",
       "Tableau de bord administrateur",
-      "Formulaire de contact",
-      "Géolocalisation",
       "Previsualisation virtuelle d'environnement",
       "Gestion du panier",
       "Interface de paiement externalisé avec stripe"
