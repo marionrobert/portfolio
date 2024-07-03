@@ -1,5 +1,5 @@
 import './App.css'
-import { Contact, GridComponent, Navbar, ProjectsContainer } from './components'
+import { Contact, GridComponent, Navbar, ProjectsContainer, Footer } from './components'
 
 function App() {
 
@@ -16,6 +16,7 @@ function App() {
         <hr />
         <Contact />
       </main>
+      <Footer />
     </>
   )
 }
