@@ -220,7 +220,7 @@ export default function GridComponent() {
         ))}
       </div>
       <div className="grid-empty" style={{backgroundColor: "black"}}>
-        <h3>Stack technologique</h3>
+        <h3>Ma stack technologique</h3>
       </div>
       <div ref={ref} className="grid-container grid-2">
         {positions.map((pos, index) => (
