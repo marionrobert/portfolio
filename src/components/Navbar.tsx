@@ -1,6 +1,6 @@
 import CV from "../assets/CV-Marion-Robert_Dev-Fullstack(FR).pdf";
 
-export default function GridComponent() {
+export default function Navbar() {
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -26,7 +26,7 @@ export default function GridComponent() {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contact</a>
+              <a className="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>

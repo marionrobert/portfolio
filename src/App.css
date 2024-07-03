@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 html {
   font-size: 16px; /* 1rem = 16px */
+  scroll-behavior: smooth;
 }
 
 
@@ -69,6 +70,9 @@ button, a {
   color: white;
 }
 
+a:hover {
+  color: white;
+}
 
 
 /* global css */
@@ -79,14 +83,33 @@ main {
 h1 {
   text-align: center;
   font-size: 2.5rem;
-  margin: 2rem 0;
+  margin: 5rem 0;
 }
 
 h2 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: 2rem 0;
-  font-size: 1.5rem;
+  margin: 1rem 0;
+  font-size: 2rem;
 }
+
+
+.navbar-brand {
+  padding: 0.75rem;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: rgba(255, 171, 157, 1) 1px solid;
+}
+
+
+hr {
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(to right, #f0f0f0, #8f8f8f, #f0f0f0);
+  width: 60%;;
+  margin: 4rem auto;
+}
+
+
 
 
 .grids {
@@ -103,7 +126,7 @@ h2 {
 }
 
 .grid-empty {
-  background-color: black;
+  background-color: rgb(33, 37, 41);
   color: white;
   border-radius: 12px;
   display: flex;
@@ -167,7 +190,6 @@ article.project {
 
 article.project h3 {
   text-align: center;
-  font-weight: bold;
   margin-bottom: 2.3rem;
   font-size: 1.7rem;
 }
@@ -186,7 +208,7 @@ ul.list-tech-stack {
 }
 
 ul.list-tech-stack li {
-  background-color: black;
+  background-color: rgba(255, 171, 157, 0.8);
   color: white;
   padding: 0.7rem;
   border-radius: 5px;
@@ -197,48 +219,10 @@ ul.features {
   list-style-type: circle;
   margin-left: 2.5rem;
 }
-/* ImageLayout.css */
-/*
-.image-layout {
-  display: none;
-  grid-template-columns: 325px 275px;
-  grid-template-rows: 300px;
-  gap: 10px;
-}
-
-.image-layout img {
-  border-radius: 5px;;
-}
-
-.big-image {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-.big-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.small-images {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.small-images img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-*/
 
 .description, .image-layout{
   width: 97%;
 }
-
 
 .description a{
   display: block;
@@ -248,25 +232,24 @@ ul.features {
   border: none;
   color: #fff;
   margin: 1rem auto !important;
-  background: rgba(0,0,0,0.09);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
 }
 .description span{
   display: block;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
   padding: 0.7rem;
   border-radius: 5px;
 }
-span:hover {
-  background-color: rgba(1, 43, 91, 0.5);
-}
+
 .description a::before, .description a::after{
   content:"";
   width: 0;
   height: 2px;
   position: absolute;
   transition: all 0.3s linear;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 171, 157, 1);
 }
 
 span::before, span::after{
@@ -275,7 +258,7 @@ span::before, span::after{
   height:0;
   position: absolute;
   transition: all 0.3s linear;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 171, 157, 1);
   border-radius: 5px;
 }
 .description a:hover::before, .description a:hover::after{
@@ -312,15 +295,78 @@ span::before, span::after{
   top: 0;
 }
 
-
 .image {
   width: 100%;
   border-radius: 5px;
 }
 
-hr {
-  margin: 2rem 0;
+
+/* contact component */
+section#contact ul li {
+  margin: 1rem 0;
 }
+
+section#contact li svg {
+  color: rgba(255, 171, 157, 0.8);
+  height: 17px;
+  margin-right: 0.2rem;
+}
+
+.cta {
+  position: relative;
+  display: inline-block;
+  padding: 19px 22px;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 30%;
+  height: 100%;
+  border-radius: 28px;
+  background: rgba(255, 171, 157, 0.5);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.cta:hover::before {
+  width: 100%;
+  border-radius: 0; /* Pour éviter de garder le bord arrondi quand l'effet est appliqué */
+  height: 100%;
+  background: rgba(255, 171, 157, 0.8);
+  border-radius: 25px;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.96);
+}
+
+
+
 
 @media screen and (min-width: 768px){
   .grid-empty h3{
@@ -353,13 +399,10 @@ hr {
 
   .description{
     width: 45%;
-    /* border: 3px solid yellow; */
   }
 
   .image-layout {
     width: 45%;
-    /* display: grid; */
-    /* border: 3px solid red; */
   }
 
 }
