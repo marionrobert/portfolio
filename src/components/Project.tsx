@@ -29,13 +29,6 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, description, technolo
         </a>
       </div>
       <div className="image-layout">
-        {/* <div className="big-image">
-          <img src={images[0]} alt="Harmony 1" />
-        </div>
-        <div className="small-images">
-          <img src={images[1]} alt="Harmony 2" />
-          <img src={images[2]} alt="Harmony 3" />
-        </div> */}
         <img className="image" src={image}/>
       </div>
     </article>

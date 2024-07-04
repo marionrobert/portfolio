@@ -5,7 +5,7 @@ import { harmony2, verdure2, synopsix1, waw, guitarpick1 } from "../assets/image
 const projects = [
   {
     title: "Harmony",
-    description: "Harmony vise à faciliter l'intégration des bénéficiaires de protection internationale en France en encourageant les interactions et la solidarité entre voisins. Sur notre plateforme, vous pouvez proposer ou réserver des activités pour échanger des services. Chaque coup de main donné vous permet d'accumuler des points pour recevoir de l'aide à votre tour.",
+    description: "Harmony vise à faciliter l'intégration des bénéficiaires d'une protection internationale en encourageant les interactions et la solidarité entre voisins. L'application web permet de proposer ou réserver des activités pour échanger des services. Chaque coup de main donné permet d'accumuler des points pour recevoir de l'aide à son tour.",
     technologies: [
       'JavaScript',
       'NodeJS / Express.js',
@@ -14,8 +14,7 @@ const projects = [
       'Redux',
       'Axios',
       'bcrypt',
-      'nodemailer',
-      'CSS / SCSS'
+      'nodemailer'
     ],
     features: [
       'Gestion des sessions utilisateurs',
@@ -29,7 +28,7 @@ const projects = [
   },
   {
     title: "Verdure",
-    description: "Verdure est une application web de vente en ligne de plantes d'intérieur. L'application est disponible uniquement en français.",
+    description: "Verdure est une application web de vente de plantes d'intérieur.",
     technologies: [
       'JavaScript',
       'NodeJS / Express.js',
@@ -38,22 +37,21 @@ const projects = [
       'Redux',
       'Axios',
       'bcrypt',
-      'Stripe',
-      'CSS / SCSS'
+      'Stripe'
     ],
     features: [
       'Gestion des sessions utilisateurs',
       'Gestion du panier',
       'Gestion du paiement avec stripe',
-      'Dashboard administrateur',
-      "Suivi de l'état commandes"
+      'Dashboard administrateur et utilisateur',
+      "Suivi et mise à jour de l'état des commandes"
     ],
     image: verdure2,
     link: "https://github.com/marionrobert/verdure-front-react"
   },
   {
     title: "Synopsix",
-    description: "Synopsix est une application web de jeu cinématographique inspirée de Pédantix. Le but est de retrouver le titre du film en découvrant son synopsis progressivement. Deux modes sont disponibles : le mode classique où vous entrez des mots pour révéler le synopsis, et le mode contre la montre où vous avez deux minutes pour deviner le titre alors que les mots du synopsis apparaissent peu à peu.",
+    description: "Synopsix est un jeu dont le but est de retrouver le titre d'un film à partir de son synopsis. Il existe deux modes: le mode classique où vous entrez des mots pour révéler le synopsis, et le mode contre la montre où vous disposez de deux minutes pour deviner le titre alors que les mots du synopsis apparaissent peu à peu.",
     technologies: [
       'Ruby',
       'Rails',
@@ -63,18 +61,17 @@ const projects = [
       'Bootstrap'
     ],
     features: [
-      'Gestion des sessions utilisateurs',
-      'Gestion du panier',
-      'Dashboard administrateur',
-      'Modération des activités et commentaires par un administrateur',
-      "Suivi de l'état commandes"
+      "Affichage des mots devinés en fonction de leur score de proximité avec ceux présents dans le synopsix",
+      "Visualisaion d'indices",
+      'Classement des meilleurs joueurs',
+      "Choix du mode de jeu et de la catégorie de films"
     ],
     image: synopsix1,
     link: "https://github.com/marionrobert/synopsix-940"
   },
   {
     title: "GuitarPick",
-    description: "Guitar Pick est un site de location de guitares, développé sur le modèle d'AirBnb. L'application est disponible uniquement en anglais.",
+    description: "Guitar Pick est un site de location de guitares, développé sur le modèle d'AirBnb.",
     technologies: [
       'Ruby',
       'Rails',
@@ -86,7 +83,7 @@ const projects = [
     features: [
       'Gestion des sessions utilisateurs',
       'Géolocalisation',
-      'Gestion du paiement avec stripe',
+      "Recherche des produits par mots clés",
       'Dashboard utilisateur',
       "Hébergement d'images dans le cloud"
     ],
@@ -104,19 +101,17 @@ const projects = [
       "Pagy",
       "Omniauth",
       "pP_search",
-      'Cloudinary',
       'Rails_admin',
       "Ransack"
     ],
     features: [
-      "Authentification (notamment via OmniAuth Google Facebook)",
-      "Barre de recherche",
+      "Authentification via OmniAuth Google Facebook",
+      "Recherche des produits par mots clés",
       "Tableau de bord administrateur",
-      "Previsualisation virtuelle d'environnement",
-      "Gestion du panier",
-      "Interface de paiement externalisé avec stripe"
+      "Prévisualisation virtuelle d'environnement",
+      "Gestion du panier, paiement via Stripe"
     ],
-    image: [waw],
+    image: waw,
     link: "https://github.com/marionrobert/GUITAR_PICK"
   }
 ]
