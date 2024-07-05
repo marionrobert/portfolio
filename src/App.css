@@ -37,7 +37,7 @@ html {
 
 body {
   font-size: 1rem;;
-	line-height: 1;
+	line-height: 1.25rem;
   text-align: center;
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color:rgb(24, 66, 114);
@@ -80,11 +80,6 @@ main {
   padding: 3rem 1rem;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin: 5rem 0;
-}
 
 h2 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -111,6 +106,34 @@ hr {
 
 
 
+/* presentation */
+section.presentation {
+  margin-bottom: 5rem;
+}
+
+section.presentation h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 5rem 0 3rem;
+}
+
+section.presentation h2 {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+}
+
+section.presentation p {
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+section.presentation svg {
+  padding: 0 0.2rem;
+}
+
+
+
+/* grids */
 
 .grids {
   width: 100%;
@@ -416,6 +439,17 @@ footer .icon:hover {
 
   footer > * {
     width: 15%;
+  }
+
+  section.presentation p {
+    margin: 0;
+    width: 29%;
+  }
+
+  section.presentation div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
 
