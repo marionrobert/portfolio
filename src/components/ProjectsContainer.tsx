@@ -1,5 +1,5 @@
 import Project from "./Project";
-import { harmony2, verdure2, synopsix1, waw, guitarpick1 } from "../assets/images/projects";
+import { harmony, verdure, synopsix1, waw, guitarpick1 } from "../assets/images/projects";
 
 
 const projects = [
@@ -23,7 +23,7 @@ const projects = [
       'Modération des activités et commentaires par un administrateur',
       "Notification de l'utilisateur par emails"
     ],
-    image: harmony2,
+    image: harmony,
     link: "https://github.com/marionrobert/harmony-front-react"
   },
   {
@@ -46,7 +46,7 @@ const projects = [
       'Dashboard administrateur et utilisateur',
       "Suivi et mise à jour de l'état des commandes"
     ],
-    image: verdure2,
+    image: verdure,
     link: "https://github.com/marionrobert/verdure-front-react"
   },
   {
