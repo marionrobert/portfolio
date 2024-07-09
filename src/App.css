@@ -37,7 +37,7 @@ html {
 
 body {
   font-size: 1rem;;
-	line-height: 1.25rem;
+	line-height: 1.25;
   text-align: center;
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color:rgb(24, 66, 114);
@@ -115,15 +115,16 @@ section.presentation h1 {
   text-align: center;
   font-size: 2.5rem;
   margin: 5rem 0 3rem;
+  line-height: 1;
 }
 
 section.presentation h2 {
   font-size: 1.3rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 section.presentation p {
-  margin: 1rem 0;
+  margin: 2rem 0;
   text-align: justify;
 }
 
