@@ -1,5 +1,5 @@
 import Project from "./Project";
-import { harmony, verdure, synopsix1, waw, guitarpick1 } from "../assets/images/projects";
+import { harmony, verdure, synopsix, waw, guitarpick } from "../assets/images/projects";
 
 
 const projects = [
@@ -66,7 +66,7 @@ const projects = [
       'Classement des meilleurs joueurs',
       "Choix du mode de jeu et de la catégorie de films"
     ],
-    image: synopsix1,
+    image: synopsix,
     link: "https://github.com/marionrobert/synopsix-940"
   },
   {
@@ -87,7 +87,7 @@ const projects = [
       'Dashboard utilisateur',
       "Hébergement d'images dans le cloud"
     ],
-    image: guitarpick1,
+    image: guitarpick,
     link: "https://github.com/marionrobert/GUITAR_PICK"
   },
   {
