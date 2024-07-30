@@ -14,7 +14,7 @@ const projects = [
       'Redux',
       'Axios',
       'bcrypt',
-      'nodemailer'
+      'GoogleAPI / nodemailer'
     ],
     features: [
       'Gestion des sessions utilisateurs',
@@ -100,7 +100,7 @@ const projects = [
       'Devise',
       "Pagy",
       "Omniauth",
-      "pP_search",
+      "Pg_search",
       'Rails_admin',
       "Ransack"
     ],
