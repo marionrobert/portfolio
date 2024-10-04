@@ -5,6 +5,12 @@
     "contact": "Contact me"
   },
   "presentation": {
-    "title": "Welcome to my portfolio"
+    "title": "Welcome to my portfolio",
+    "subtitle": "I am Marion Robert and I am a Full-stack Web Developer.",
+    "paragraphs": {
+      "1": "With a background in law, I spent three rewarding years supporting asylum seekers in the community sector. Driven by a desire for new things and daily challenges, I retrained in IT.",
+      "2": "I discovered programming by learning the Python language, then I followed two training courses in web development with Le Wagon and the 3w Academy.",
+      "3": "Over the last two years, my various apprenticeships, projects and experiences have allowed me to put my knowledge into practice and strengthen my interest in IT."
+    }
   }
 }

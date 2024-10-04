@@ -5,6 +5,12 @@
     "contact": "Contactez-moi"
   },
   "presentation": {
-    "title": "Bienvenue sur mon portfolio"
+    "title": "Bienvenue sur mon portfolio",
+    "subtitle": "Je m'appelle Marion Robert et je suis Développeuse Web Full-stack.",
+    "paragraphs": {
+      "1": "Issue d’une formation en droit, j'ai passé trois années enrichissantes à accompagner les demandeurs d’asile au sein du secteur communautaire. Animée par le désir de nouveautés et de challenges quotidiens, je me suis reconvertie dans l'IT.",
+      "2": "J'ai découvert la programmation à travers l'apprentissage du language python, puis j'ai suivi deux formations en développement web avec Le Wagon et la 3w Academy.",
+      "3": "Au cours des deux dernières années, mes divers apprentissages, projets et expériences m'ont permis de mettre en pratique mes connaissances et de renforcer mon intérêt pour l'IT."
+    }
   }
 }
