@@ -1,0 +1,52 @@
+{
+  "navbar" : {
+    "curriculum": "My resume",
+    "projects": "My projects",
+    "contact": "Contact me"
+  },
+  "presentation": {
+    "title": "Welcome to my portfolio",
+    "subtitle": "I am Marion Robert and I am a Full-stack Web Developer.",
+    "paragraphs": {
+      "1": "With a background in law, I spent three rewarding years supporting asylum seekers in the community sector. Driven by a desire for new things and daily challenges, I retrained in IT.",
+      "2": "I discovered programming by learning the Python language, then I followed two training courses in web development with Le Wagon and the 3w Academy.",
+      "3": "Over the last two years, my various apprenticeships, projects and experiences have allowed me to put my knowledge into practice and strengthen my interest in IT."
+    }
+  },
+  "grid": "My tech stack",
+  "projects": {
+    "title": "My Projects",
+    "features": "Main Features:",
+    "button": "View Code",
+    "harmony": {
+      "title": "Harmony",
+      "description": "Harmony aims to facilitate the integration of beneficiaries of international protection by encouraging interactions and solidarity among neighbors. The web application allows users to propose or book activities to exchange services. Each help provided allows users to accumulate points to receive help in return.",
+      "features": "User session management;Search for available activities by filters;Verification of points required for booking;Moderation of activities and comments by an administrator;User notification via emails"
+    },
+    "verdure": {
+      "title": "Verdure",
+      "description": "Verdure is a web application for selling indoor plants.",
+      "features": "User session management;Cart management;Payment management with Stripe;Administrator and user dashboard;Tracking and updating order status"
+    },
+    "synopsix": {
+      "title": "Synopsix",
+      "description": "Synopsix is a game where the goal is to guess the title of a movie based on its synopsis.",
+      "features": "Display of guessed words based on their proximity score;Visualization of clues;Ranking of top players;Choice of game mode and movie category"
+    },
+    "guitarpick": {
+      "title": "GuitarPick",
+      "description": "GuitarPick is a guitar rental site developed on the Airbnb model.",
+      "features": "User session management;Geolocation;Search for products by keywords;User dashboard;Image hosting in the cloud"
+    },
+    "waw": {
+      "title": "Wall Art Works",
+      "description": "Wall Art Works is an e-commerce site specializing in selling AI-generated paintings.",
+      "features": "Authentication via OmniAuth Google Facebook;Search for products by keywords;Administrator dashboard;Virtual environment preview;Cart management, payment via Stripe"
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "city": "Montreal, Quebec, Canada",
+    "button": "Send an email"
+  }
+}

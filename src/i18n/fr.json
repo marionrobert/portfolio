@@ -1,0 +1,53 @@
+{
+  "navbar" : {
+    "curriculum": "Mon CV",
+    "projects": "Mes projets",
+    "contact": "Contactez-moi"
+  },
+  "presentation": {
+    "title": "Bienvenue sur mon portfolio",
+    "subtitle": "Je m'appelle Marion Robert et je suis Développeuse Web Full-stack.",
+    "paragraphs": {
+      "1": "Issue d’une formation en droit, j'ai passé trois années enrichissantes à accompagner les demandeurs d’asile au sein du secteur communautaire. Animée par le désir de nouveautés et de challenges quotidiens, je me suis reconvertie dans l'IT.",
+      "2": "J'ai découvert la programmation à travers l'apprentissage du language python, puis j'ai suivi deux formations en développement web avec Le Wagon et la 3w Academy.",
+      "3": "Au cours des deux dernières années, mes divers apprentissages, projets et expériences m'ont permis de mettre en pratique mes connaissances et de renforcer mon intérêt pour l'IT."
+    }
+  },
+  "grid": "Ma stack technologique",
+  "projects": {
+    "title": "Mes projets",
+    "features": "Fonctionnalités principales :",
+    "button": "Voir le code",
+    "harmony": {
+      "title": "Harmony",
+      "description": "Harmony vise à faciliter l'intégration des bénéficiaires d'une protection internationale en encourageant les interactions et la solidarité entre voisins. L'application web permet de proposer ou réserver des activités pour échanger des services. Chaque coup de main donné permet d'accumuler des points pour recevoir de l'aide à son tour.",
+      "features": "Gestion des sessions utilisateurs;Recherche des activités disponibles par filtres;Vérification des points nécessaires à la réservation;Modération des activités et commentaires par un administrateur;Notification de l'utilisateur par emails"
+    },
+    "verdure": {
+      "title": "Verdure",
+      "description": "Verdure est une application web de vente de plantes d'intérieur.",
+      "features": "Gestion des sessions utilisateurs;Gestion du panier;Gestion du paiement avec Stripe;Dashboard administrateur et utilisateur;Suivi et mise à jour de l'état des commandes"
+    },
+    "synopsix": {
+      "title": "Synopsix",
+      "description": "Synopsix est un jeu dont le but est de retrouver le titre d'un film à partir de son synopsis.",
+      "features": "Affichage des mots devinés en fonction de leur score de proximité;Visualisation d'indices;Classement des meilleurs joueurs;Choix du mode de jeu et de la catégorie de films"
+    },
+    "guitarpick": {
+      "title": "GuitarPick",
+      "description": "GuitarPick est un site de location de guitares, développé sur le modèle d'Airbnb.",
+      "features": "Gestion des sessions utilisateurs;Géolocalisation;Recherche des produits par mots-clés;Dashboard utilisateur;Hébergement d'images dans le cloud"
+    },
+    "waw": {
+      "title": "Wall Art Works",
+      "description": "Wall Art Works est un site marchand spécialisé dans la vente de tableaux générés par intelligence artificielle.",
+      "features": "Authentification via OmniAuth Google Facebook;Recherche des produits par mots-clés;Tableau de bord administrateur;Prévisualisation virtuelle d'environnement;Gestion du panier, paiement via Stripe"
+    }
+  }
+  ,
+  "contact": {
+    "title": "Contactez-moi",
+    "city": "Montréal, Québec, Canada",
+    "button": "Envoyer un email"
+  }
+}
