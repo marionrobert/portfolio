@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import { useInView } from 'react-intersection-observer';
 import { aws, bootstrap, css, gcp, git, html, javascript, nodeJs, postgresql, python, react, ror, ruby, sass, sql, typescript } from '../assets/images/icons';
 import { useTranslation } from "react-i18next";
+import { CellPosition, Position } from "../types";
 
 const iconColorsGrid1 = [
   { icon: html, color: '#f16529' },        // HTML - Orange
@@ -38,13 +39,6 @@ const gridReferences: { [key: string]: number[] } = {
   "9": [3, 3],
 };
 
-// Interface for a grid position
-interface Position {
-  row: number;
-  col: number;
-  index: number;
-}
-
 // Array to hold grid positions
 const positions: Position[] = [];
 
@@ -68,11 +62,6 @@ const findAdjacentCells = (row: number, col: number) => {
   if (col < 3) adjacent.push({ row, col: col + 1 });
   return adjacent;
 };
-
-interface CellPosition {
-  row: number;
-  col: number;
-}
 
 const calculateOffsets = (emptyCellPos: CellPosition, selectedCell: CellPosition, cellElement: HTMLElement) => {
   // Get the computed style of the cell element to determine its dimensions

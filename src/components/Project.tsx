@@ -1,15 +1,9 @@
 import { useTranslation } from "react-i18next";
-interface ProjectProps {
-  title: string;
-  description: string;
-  technologies: string[];
-  features: string[];
-  image: string;
-  link: string;
-}
+import { ProjectProps } from "../types";
 
 const ProjectComponent: React.FC<ProjectProps> = ({ title, description, technologies, features, image, link }) => {
   const {t} = useTranslation();
+  const featuresArray = features.split(';');
 
   return (
     <article className="project" id={title}>
@@ -23,7 +17,7 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, description, technolo
         </ul>
         <h4>{t("projects.features")}</h4>
         <ul className="features">
-        {features.map((feature, index) => (
+        {featuresArray.map((feature, index) => (
             <li key={index}>{feature}</li>
           ))}
         </ul>
