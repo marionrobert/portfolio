@@ -1,6 +1,10 @@
 import CV from "../assets/CV-Marion-Robert_Dev-Fullstack(FR).pdf";
+import { useTranslation } from "react-i18next";
+import Lang from "./Lang";
 
 export default function Navbar() {
+  const { t } = useTranslation();
+
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -11,11 +15,11 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href={CV} download="CV_MarionRobert.pdf">Mon CV</a>
+              <a className="nav-link" href={CV} download="CV_MarionRobert.pdf">{t("navbar.curriculum")}</a>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Mes projets
+              {t("navbar.projects")}
               </a>
               <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a className="dropdown-item" href="#Harmony">Harmony</a></li>
@@ -26,9 +30,10 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contact">Contact</a>
+              <a className="nav-link" href="#contact">{t("navbar.contact")}</a>
             </li>
           </ul>
+          <Lang />
         </div>
       </div>
     </nav>

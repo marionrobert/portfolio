@@ -1,0 +1,10 @@
+{
+  "navbar" : {
+    "curriculum": "Mon CV",
+    "projects": "Mes projets",
+    "contact": "Contactez-moi"
+  },
+  "presentation": {
+    "title": "Bienvenue sur mon portfolio"
+  }
+}
