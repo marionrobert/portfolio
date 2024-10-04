@@ -18,5 +18,10 @@
     "title": "Mes projets",
     "features": "Fonctionnalités principales :",
     "button": "Voir le code"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "city": "Montréal, Québec, Canada",
+    "button": "Envoyer un email"
   }
 }

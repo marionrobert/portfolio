@@ -18,5 +18,10 @@
     "title": "My projects",
     "features": "Main features:",
     "button": "View code"
+  },
+  "contact": {
+    "title": "Contact me",
+    "city": "Montreal, Quebec, Canada",
+    "button": "Send an email"
   }
 }
