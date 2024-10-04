@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { useInView } from 'react-intersection-observer';
 import { aws, bootstrap, css, gcp, git, html, javascript, nodeJs, postgresql, python, react, ror, ruby, sass, sql, typescript } from '../assets/images/icons';
+import { useTranslation } from "react-i18next";
 
 const iconColorsGrid1 = [
   { icon: html, color: '#f16529' },        // HTML - Orange
@@ -91,6 +92,7 @@ const calculateOffsets = (emptyCellPos: CellPosition, selectedCell: CellPosition
 // Component function
 export default function GridComponent() {
   const { ref, inView } = useInView();
+  const {t} = useTranslation();
 
   // State for grid-1
   const [emptyCellPos1, setEmptyCellPos1] = useState<CellPosition>({ row: 3, col: 3 });
@@ -220,7 +222,7 @@ export default function GridComponent() {
         ))}
       </div>
       <div className="grid-empty" style={{backgroundColor: "black"}}>
-        <h3>Ma stack technologique</h3>
+        <h3>{t("grid")}</h3>
       </div>
       <div ref={ref} className="grid-container grid-2">
         {positions.map((pos, index) => (

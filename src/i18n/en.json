@@ -12,5 +12,11 @@
       "2": "I discovered programming by learning the Python language, then I followed two training courses in web development with Le Wagon and the 3w Academy.",
       "3": "Over the last two years, my various apprenticeships, projects and experiences have allowed me to put my knowledge into practice and strengthen my interest in IT."
     }
+  },
+  "grid": "My tech stack",
+  "projects": {
+    "title": "My projects",
+    "features": "Main features:",
+    "button": "View code"
   }
 }

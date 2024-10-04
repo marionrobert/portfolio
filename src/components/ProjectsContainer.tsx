@@ -1,6 +1,6 @@
 import Project from "./Project";
 import { harmony, verdure, synopsix, waw, guitarpick } from "../assets/images/projects";
-
+import { useTranslation } from "react-i18next";
 
 const projects = [
   {
@@ -117,9 +117,10 @@ const projects = [
 ]
 
 export default function ProjectsContainer() {
+  const {t} = useTranslation();
   return (
     <section className="projects-container">
-      <h2>Mes projets</h2>
+      <h2>{t("projects.title")}</h2>
       {projects.map((project, index) => (
         <Project
           key={index}
