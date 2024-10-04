@@ -4,14 +4,13 @@ import { faCircleCheck} from "@fortawesome/free-regular-svg-icons";
 import { faSpaceAwesome } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
 
-
 export default function Presentation(){
   const { t } = useTranslation();
 
   return(
     <section className="presentation">
-      <h1>Bienvenue sur mon portfolio</h1>
-      <h2>Je m'appelle Marion Robert et je suis Développeuse Web Full-stack.</h2>
+      <h1>{t("presentation.title")}</h1>
+      <h2>{t("presentation.subtitle")}</h2>
       <div>
         <p>
           <FontAwesomeIcon icon={faSpaceAwesome} className="fa-fade"/><FontAwesomeIcon icon={faLaptop} />

@@ -104,6 +104,34 @@ h2 {
   border: rgba(255, 171, 157, 1) 1px solid;
 }
 
+/* .language-switcher {
+  background-color: transparent;
+  border: none;
+  font-size: small;
+  color: white;
+  cursor: pointer;
+}
+
+.language-switcher option {
+  background-color: black;
+  cursor: pointer;
+}
+
+.language-switcher:hover, .language-switcher:focus {
+  cursor: pointer;
+  background-color: black;
+}
+
+.language-switcher option:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 100px red inset !important;
+  color:white;
+}
+
+.language-switcher option:checked{
+  box-shadow: 0 0 10px 100px red inset !important;
+} */
+
 
 hr {
   border: none;

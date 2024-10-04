@@ -1,3 +1,5 @@
+import { Language } from "./enums/Language";
+
 export interface ProjectProps {
   title: string;
   description: string;
@@ -16,4 +18,9 @@ export interface Position {
   row: number;
   col: number;
   index: number;
+}
+
+export interface Option {
+  value: Language;
+  label: string;
 }
