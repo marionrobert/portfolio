@@ -528,3 +528,59 @@ footer .icon:hover {
   }
 
 }
+
+.exemple-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #1e3a8a; /* Fond bleu foncé */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exemple-project {
+  position: absolute;
+  width: 80%;
+  max-width: 600px;
+  transition: all 0.3s ease-in-out;
+}
+
+.exemple-project-content {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  height: calc(100% - 32px);
+}
+
+.exemple-project-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.exemple-project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.exemple-grid-item {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #f8f8f8;
+}
+
+.exemple-grid-item p {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.exemple-project.active {
+  transform: translateX(0) !important;
+  z-index: 10 !important;
+}

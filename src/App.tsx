@@ -1,5 +1,5 @@
 import './App.css'
-import { Contact, GridComponent, Navbar, ProjectsContainer, Footer, Presentation } from './components';
+import { Contact, GridComponent, Navbar, ProjectsContainer, Footer, Presentation, Exemple } from './components';
 
 function App() {
 
@@ -12,6 +12,8 @@ function App() {
         <Presentation />
         <hr />
         <GridComponent />
+        <hr />
+        <Exemple />
         <hr />
         <ProjectsContainer />
         <hr />
