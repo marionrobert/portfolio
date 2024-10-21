@@ -24,20 +24,12 @@ const Exemple: React.FC = () => {
           className={`exemple-project ${project.id === activeProject ? 'active' : ''}`}
           style={{
             zIndex: projects.length - Math.abs(project.id - activeProject),
-            transform: `translateX(${(project.id - activeProject) * 20}px)`,
+            left: `${(project.id - 1) * 20}px`,
           }}
           onClick={() => setActiveProject(project.id)}
         >
           <div className="exemple-project-content">
             <h2 className="exemple-project-title">{project.title}</h2>
-            <div className="exemple-project-grid">
-              <div className="exemple-grid-item">
-                <p>Textes</p>
-              </div>
-              <div className="exemple-grid-item">
-                <p>Image</p>
-              </div>
-            </div>
           </div>
         </div>
       ))}
