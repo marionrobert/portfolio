@@ -534,7 +534,7 @@ footer .icon:hover {
   height: 200px;
   width: 100%;
   overflow: hidden;
-  background-color: #1e3a8a; /* Fond bleu foncé */
+  background-color: #1e3a8a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -546,6 +546,13 @@ footer .icon:hover {
   max-width: 600px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.exemple-project.active {
+  opacity: 1;
+  z-index: 10 !important;
 }
 
 .exemple-project-content {
@@ -553,7 +560,6 @@ footer .icon:hover {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
-  height: calc(100% - 32px);
 }
 
 .exemple-project-title {
@@ -563,24 +569,6 @@ footer .icon:hover {
   color: #333;
 }
 
-.exemple-project-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.exemple-grid-item {
-  border: 1px solid #eee;
-  border-radius: 4px;
-  padding: 8px;
-  background-color: #f8f8f8;
-}
-
-.exemple-grid-item p {
-  font-size: 0.875rem;
-  color: #666;
-}
-
-.exemple-project.active {
-  z-index: 10 !important;
+.exemple-project {
+  transition: opacity 0.75s ease-in-out, z-index 0.75s ease-in-out;
 }
