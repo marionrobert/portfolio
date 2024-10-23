@@ -20,7 +20,7 @@
     "button": "Voir le code",
     "harmony": {
       "title": "Harmony",
-      "description": "Harmony facilite l'intégration des bénéficiaires de la protection internationale en favorisant les interactions entre voisins. L'application permet de proposer ou réserver des activités pour échanger des services, et chaque aide donnée permet d'accumuler des points pour recevoir de l'aide à son tour.",
+      "description": "Harmony aide les bénéficiaires de la protection internationale à s'intégrer en favorisant les interactions entre voisins. L'application permet de proposer ou de réserver des activités pour échanger des services, et chaque aide fournie permet d'accumuler des points pour recevoir de l'aide en retour.",
       "features": "Gestion des sessions utilisateurs;Recherche des activités disponibles par filtres;Gestion des points;Modération du contenu par un administrateur;Notification de l'utilisateur par emails"
     },
     "verdure": {

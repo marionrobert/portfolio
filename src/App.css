@@ -235,29 +235,40 @@ section.presentation svg {
 section.projects-container {
   margin: 1rem auto;
   position: relative;
-  min-height: 60vh;
-  text-align: center;
+  min-height: 150vh;
   max-width: 1200px;
+  border: 1px solid green;
 }
 
 div.project {
   position: absolute;
   max-width: 1000px;
-  transition: all 0.75s ease-in-out;
   cursor: pointer;
   opacity: 0.5;
   overflow: hidden;
   box-shadow: rgba(149, 157, 165, 0.1) 0px 4px 12px;
   border-radius: 16px;
-  margin: 3rem auto;
-  height: 600px;
-  padding: 2.5rem 4rem;
+  margin: 1rem auto;
+  padding: 1.5rem 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.09);
+  background-color:rgb(24, 66, 114);
+  transition: all 0.75s linear;
+  height: 875px;
+  width: 75%;
+}
+
+div.project * {
+  visibility: hidden;
+  transition: all 0.75s linear;
 }
 
 div.project.active {
   opacity: 1;
-  background-color:rgb(24, 66, 114);
+}
+
+div.project.active * {
+  visibility: visible;
+  transition: all 0.75s linear;
 }
 
 article.project {
@@ -272,7 +283,7 @@ article.project {
 article.project h3 {
   text-align: center;
   margin-bottom: 2.3rem;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 article.project h4 {
@@ -294,7 +305,7 @@ ul.list-tech-stack li {
   padding: 0.5rem;
   border-radius: 5px;
   margin: 0.2rem;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 ul.features {
@@ -302,8 +313,12 @@ ul.features {
   margin-left: 2.5rem;
 }
 
-.description, .image-layout{
-  width: 97%;
+.description {
+  width: 100%;
+}
+
+.image-layout {
+  width: 70%;
 }
 
 .image {
@@ -322,6 +337,7 @@ ul.features {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
 }
+
 .description span{
   display: block;
   background-color: rgba(0, 0, 0, 0.8);
@@ -519,6 +535,14 @@ footer .icon:hover {
     justify-content: space-evenly;
   }
 
+  div.project {
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    background-color:rgb(24, 66, 114);
+    transition: all 1s linear;
+    height: 850px;
+    width: 87%;
+  }
 }
 
 @media screen and (min-width: 1024px){
@@ -541,16 +565,29 @@ footer .icon:hover {
   }
 
   .description{
-    width: 45%;
+    width: 41%;
   }
 
   .image-layout {
-    width: 45%;
+    width: 47%;
+  }
+
+  section.projects-container {
+    margin: 1rem auto;
+    position: relative;
+    min-height: 65vh;
+    max-width: 1200px;
+  }
+
+  div.project {
+    height: 600px;
+    width: 90%;
+    padding: 2rem 0rem;
   }
 
 }
 
-.exemple-container {
+/* .exemple-container {
   position: relative;
   height: 200px;
   width: 100%;
@@ -587,4 +624,4 @@ footer .icon:hover {
 
 .exemple-project {
   transition: opacity 0.75s ease-in-out, z-index 0.75s ease-in-out;
-}
+} */

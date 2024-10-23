@@ -91,13 +91,13 @@ export default function ProjectsContainer() {
   return (
     <section className="projects-container">
       <h2>{t("projects.title")}</h2>
-      {projects.map((project, index) => (
+      {projects.map((project) => (
         <div
           key={project.id}
           className={`project ${project.id === activeProject ? 'active' : ''}`}
           style={{
             zIndex: projects.length - Math.abs(project.id - activeProject),
-            left: `${(project.id - 1) * 22}px`, // Ajustez la position
+            left: `${(project.id - 1) * 25}px`, // Ajustez la position
           }}
           onClick={() => setActiveProject(project.id)}
         >
