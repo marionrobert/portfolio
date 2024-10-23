@@ -234,7 +234,30 @@ section.presentation svg {
 
 section.projects-container {
   margin: 1rem auto;
+  position: relative;
+  min-height: 60vh;
+  text-align: center;
   max-width: 1200px;
+}
+
+div.project {
+  position: absolute;
+  max-width: 1000px;
+  transition: all 0.75s ease-in-out;
+  cursor: pointer;
+  opacity: 0.5;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 4px 12px;
+  border-radius: 16px;
+  margin: 3rem auto;
+  height: 600px;
+  padding: 2.5rem 4rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+div.project.active {
+  opacity: 1;
+  background-color:rgb(24, 66, 114);
 }
 
 article.project {
@@ -242,13 +265,8 @@ article.project {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   flex-wrap: wrap;
-  border-radius: 20px;
-  margin: 3rem 0;
-  padding: 2.5rem 0.5rem;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 article.project h3 {
@@ -286,6 +304,11 @@ ul.features {
 
 .description, .image-layout{
   width: 97%;
+}
+
+.image {
+  width: 100%;
+  border-radius: 5px;
 }
 
 .description a{
@@ -359,10 +382,8 @@ span::before, span::after{
   top: 0;
 }
 
-.image {
-  width: 100%;
-  border-radius: 5px;
-}
+
+
 
 
 /* contact component */
@@ -534,10 +555,6 @@ footer .icon:hover {
   height: 200px;
   width: 100%;
   overflow: hidden;
-  background-color: #1e3a8a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .exemple-project {
@@ -547,7 +564,6 @@ footer .icon:hover {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   opacity: 0.5;
-  cursor: pointer;
 }
 
 .exemple-project.active {

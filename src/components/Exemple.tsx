@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface Project {
   id: number;
@@ -6,21 +6,34 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { id: 1, title: "Projet 1" },
-  { id: 2, title: "Projet 2" },
-  { id: 3, title: "Projet 3" },
-  { id: 4, title: "Projet 4" },
-  { id: 5, title: "Projet 5" },
+  { id: 1, title: "Harmony" },
+  { id: 2, title: "Verdure" },
+  { id: 3, title: "Synopsix" },
+  { id: 4, title: "GuitarPick" },
+  { id: 5, title: "Wall Art Works" },
 ];
 
 const Exemple: React.FC = () => {
   const [activeProject, setActiveProject] = useState(1);
+
+  // useEffect(() => {
+  //   const hash = (window.location.hash).substring(1);
+  //   console.log(" hash -->", hash)
+  //   if (hash) {
+  //     const project = projects.find(p => p.title === hash); // Trouve le projet correspondant au hash
+  //     if (project) {
+  //       setActiveProject(project.id); // Définit le projet comme actif
+  //     }
+  //   }
+  //   console.log("activeProject -->", activeProject)
+  // }, []);
 
   return (
     <div className="exemple-container">
       {projects.map((project) => (
         <div
           key={project.id}
+          id={project.title}
           className={`exemple-project ${project.id === activeProject ? 'active' : ''}`}
           style={{
             zIndex: projects.length - Math.abs(project.id - activeProject),

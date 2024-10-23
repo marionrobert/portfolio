@@ -1,10 +1,12 @@
+import { useState } from "react";
 import Project from "./Project";
 import { harmony, verdure, synopsix, waw, guitarpick } from "../assets/images/projects";
 import { useTranslation } from "react-i18next";
 
 const projects = [
   {
-    id: "harmony",
+    id: 1,
+    name: "harmony",
     image: harmony,
     link: "https://github.com/marionrobert/harmony-front-react",
     technologies: [
@@ -19,7 +21,8 @@ const projects = [
     ]
   },
   {
-    id: "verdure",
+    id: 2,
+    name: "verdure",
     image: verdure,
     link: "https://github.com/marionrobert/verdure-front-react",
     technologies: [
@@ -34,7 +37,8 @@ const projects = [
     ]
   },
   {
-    id: "synopsix",
+    id: 3,
+    name: "synopsix",
     image: synopsix,
     link: "https://github.com/marionrobert/synopsix-940",
     technologies: [
@@ -47,7 +51,9 @@ const projects = [
     ]
   },
   {
-    id: "guitarpick",
+
+    id: 4,
+    name: "guitarpick",
     image: guitarpick,
     link: "https://github.com/marionrobert/GUITAR_PICK",
     technologies: [
@@ -60,7 +66,8 @@ const projects = [
     ]
   },
   {
-    id: "waw",
+    id: 5,
+    name: "waw",
     image: waw,
     link: "https://github.com/marionrobert/GUITAR_PICK",
     technologies: [
@@ -78,21 +85,32 @@ const projects = [
 ];
 
 export default function ProjectsContainer() {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
+  const [activeProject, setActiveProject] = useState(1); // État pour le projet actif
+
   return (
     <section className="projects-container">
       <h2>{t("projects.title")}</h2>
       {projects.map((project, index) => (
-        <Project
-          key={index}
-          title={t(`projects.${project.id}.title`)}
-          description={t(`projects.${project.id}.description`)}
-          technologies={project.technologies}
-          features={t(`projects.${project.id}.features`)}
-          image={project.image}
-          link={project.link}
-        />
+        <div
+          key={project.id}
+          className={`project ${project.id === activeProject ? 'active' : ''}`}
+          style={{
+            zIndex: projects.length - Math.abs(project.id - activeProject),
+            left: `${(project.id - 1) * 22}px`, // Ajustez la position
+          }}
+          onClick={() => setActiveProject(project.id)}
+        >
+          <Project
+             title={t(`projects.${project.name}.title`)}
+             description={t(`projects.${project.name}.description`)}
+             technologies={project.technologies}
+             features={t(`projects.${project.name}.features`)}
+             image={project.image}
+             link={project.link}
+          />
+        </div>
       ))}
     </section>
-  )
+  );
 }
