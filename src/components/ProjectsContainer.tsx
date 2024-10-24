@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Project from "./Project";
 import { harmony, verdure, synopsix, waw, guitarpick } from "../assets/images/projects";
 import { useTranslation } from "react-i18next";
@@ -10,8 +10,7 @@ const projects = [
     image: harmony,
     link: "https://github.com/marionrobert/harmony-front-react",
     technologies: [
-      'JavaScript',
-      'NodeJS / Express.js',
+      'JS / NodeJS / Express.js',
       'React',
       'SQL / MySQL',
       'Redux',
@@ -86,31 +85,50 @@ const projects = [
 
 export default function ProjectsContainer() {
   const { t } = useTranslation();
-  const [activeProject, setActiveProject] = useState(1); // État pour le projet actif
+  const [activeProject, setActiveProject] = useState(1);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const renderProjects = () => {
+    return projects.map((project) => (
+      <div
+        key={project.id}
+        className={`project ${isMobile ? '' : (project.id === activeProject ? 'active' : '')}`}
+        onClick={() => !isMobile && setActiveProject(project.id)}
+        style={isMobile ? undefined : {
+          zIndex: projects.length - Math.abs(project.id - activeProject),
+          left: `${(project.id - 1) * 25}px`, // Ajustez la position
+        }}
+      >
+        <Project
+          title={t(`projects.${project.name}.title`)}
+          description={t(`projects.${project.name}.description`)}
+          technologies={project.technologies}
+          features={t(`projects.${project.name}.features`)}
+          image={project.image}
+          link={project.link}
+        />
+      </div>
+    ));
+  };
 
   return (
-    <section className="projects-container">
+    <section className={`projects-container ${!isMobile ? 'not-mobile' : ''}`}>
       <h2>{t("projects.title")}</h2>
-      {projects.map((project) => (
-        <div
-          key={project.id}
-          className={`project ${project.id === activeProject ? 'active' : ''}`}
-          style={{
-            zIndex: projects.length - Math.abs(project.id - activeProject),
-            left: `${(project.id - 1) * 25}px`, // Ajustez la position
-          }}
-          onClick={() => setActiveProject(project.id)}
-        >
-          <Project
-             title={t(`projects.${project.name}.title`)}
-             description={t(`projects.${project.name}.description`)}
-             technologies={project.technologies}
-             features={t(`projects.${project.name}.features`)}
-             image={project.image}
-             link={project.link}
-          />
+      {isMobile ? (
+        <div className="carousel-container">
+          {renderProjects()}
         </div>
-      ))}
+      ) : (
+        renderProjects()
+      )}
     </section>
   );
 }

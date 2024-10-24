@@ -13,8 +13,6 @@ function App() {
         <hr />
         <GridComponent />
         <hr />
-        {/* <Exemple />
-        <hr /> */}
         <ProjectsContainer />
         <hr />
         <Contact />
