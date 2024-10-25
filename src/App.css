@@ -41,7 +41,7 @@ body {
   text-align: center;
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color:rgb(24, 66, 114);
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.951);
   color: whitesmoke;
   word-break: break-word;
 }
@@ -88,21 +88,31 @@ h2 {
   font-size: 2rem;
 }
 
+#navbar {
+  background-color: black !important;
+}
+
 .navbar .container-fluid {
   max-width: 1500px;
   margin: 0 auto;
   padding: 0.5rem 1rem;
 }
 
-.navbar li {
-  padding: 0.5rem;
+.navbar a {
+  padding: 0.5rem !important;
+  color: white !important;
+}
+
+.navbar a:hover {
+  color: rgba(255, 171, 157, 1) !important;
+  transition: color 0.5s linear;
 }
 
 .navbar-brand {
   padding: 0.75rem;
   border-radius: 50%;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: rgba(255, 171, 157, 1) 1px solid;
+  border: rgba(255, 171, 157, 1) 2px solid;
 }
 
 /* .language-switcher {
@@ -264,8 +274,7 @@ div.project {
   margin: 1rem auto;
   padding: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  background-color:rgb(24, 66, 114);
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.951);
 }
 
 article.project {
@@ -541,12 +550,11 @@ footer .icon:hover {
     position: absolute;
     max-width: 1000px;
     cursor: pointer;
-    opacity: 0.4;
+    opacity: 0.7;
     overflow: hidden;
     height: 950px;
     width: 87%;
     background-color: transparent;
-    transition: all 2s linear;
     border: 1px solid rgba(255, 171, 157, 0.5);
   }
 
@@ -554,15 +562,13 @@ footer .icon:hover {
     visibility: hidden;
   }
 
+  section.projects-container.not-mobile div.project.active *:not(span.vertical-title) {
+    visibility: visible;
+  }
+
   section.projects-container.not-mobile div.project.active {
     opacity: 1;
     background-color: black;
-    transition: all 3s linear;
-  }
-
-  section.projects-container.not-mobile div.project.active * {
-    visibility: visible;
-    transition: none;
   }
 
   section.projects-container.not-mobile article.project {
@@ -583,17 +589,18 @@ footer .icon:hover {
   section.projects-container.not-mobile div.project span.vertical-title {
     display: block;
     visibility: visible;
-    writing-mode: vertical-rl; /* Or vertical-lr for the other direction */
+    writing-mode: vertical-rl;
     text-orientation: upright;
     text-transform: uppercase;
     font-size: smaller;
     position: absolute;
     top: 0.5%;
     color: rgba(255, 171, 157, 0.75);
+    transition: color 0.3s linear;
   }
 
-  span.vertical-title:hover {
-    transition: all 0.3s linear;
+  section.projects-container.not-mobile div.project span.vertical-title:hover {
+    color: white;
   }
 
   span.vertical-title.right {
@@ -656,42 +663,3 @@ footer .icon:hover {
   }
 
 }
-
-/* .exemple-container {
-  position: relative;
-  height: 200px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.exemple-project {
-  position: absolute;
-  width: 80%;
-  max-width: 600px;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  opacity: 0.5;
-}
-
-.exemple-project.active {
-  opacity: 1;
-  z-index: 10 !important;
-}
-
-.exemple-project-content {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-}
-
-.exemple-project-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 16px;
-  color: #333;
-}
-
-.exemple-project {
-  transition: opacity 0.75s ease-in-out, z-index 0.75s ease-in-out;
-} */

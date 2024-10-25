@@ -6,7 +6,7 @@ export default function Navbar() {
   const { t } = useTranslation();
 
   return (
-    <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav id="navbar" className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <a className="navbar-brand mb-0 h1" href="#">MR</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

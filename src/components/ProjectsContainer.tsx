@@ -103,7 +103,7 @@ export default function ProjectsContainer() {
         className={`project ${isMobile ? '' : (project.id === activeProject ? 'active' : '')}`}
         onClick={() => !isMobile && setActiveProject(project.id)}
         style={isMobile ? undefined : {
-          zIndex: projects.length - Math.abs(project.id - activeProject),
+          zIndex: project.id === activeProject ? 10 : projects.length - Math.abs(project.id - activeProject),
           left: `${(project.id - 1) * 25}px`, // Ajustez la position
         }}
       >
