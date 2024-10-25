@@ -41,6 +41,7 @@ body {
   text-align: center;
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-color:rgb(24, 66, 114);
+  background-color: black;
   color: whitesmoke;
   word-break: break-word;
 }
@@ -143,7 +144,6 @@ hr {
 }
 
 
-
 /* presentation */
 section.presentation {
   margin: 0 auto 5rem;
@@ -153,7 +153,7 @@ section.presentation {
 section.presentation h1 {
   text-align: center;
   font-size: 2.5rem;
-  margin: 5rem 0 3rem;
+  margin: 7rem 0 3rem;
   line-height: 1;
 }
 
@@ -180,7 +180,7 @@ section.presentation svg {
   display: flex;
   justify-content:space-around;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 5rem auto;
 }
 
 .grids > div {
@@ -196,6 +196,7 @@ section.presentation svg {
   flex-direction: column;
   justify-content: center;
   padding: 0.1rem;
+  border: 1px solid white;
 }
 
 .grid-empty h3 {
@@ -233,7 +234,7 @@ section.presentation svg {
 /* Projet component */
 
 section.projects-container {
-  margin: 1rem auto;
+  margin: 2rem auto;
   max-width: 1200px;
 }
 
@@ -246,19 +247,25 @@ section.projects-container {
 }
 
 .carousel-container  .project {
-  scroll-snap-align: start; /* Aligne les éléments au début du conteneur */
+  scroll-snap-align: start;
   max-width: 300px;
-  cursor: pointer; /* Change le curseur en pointeur */
-  flex: 0 0 auto; /* Empêche la flexbox de rétrécir les éléments */
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+span.vertical-title {
+  display: none;
 }
 
 div.project {
-  box-shadow: rgba(149, 157, 165, 0.1) 0px 4px 12px;
+  /* box-shadow: rgba(149, 157, 165, 0.1) 0px 4px 12px; */
+  /* box-shadow: 5px 0 10px rgba(255, 255, 255, 0.3); */
   border-radius: 16px;
   margin: 1rem auto;
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   background-color:rgb(24, 66, 114);
+  background-color: black;
 }
 
 article.project {
@@ -526,7 +533,7 @@ footer .icon:hover {
   section.projects-container.not-mobile {
     margin: 1rem auto;
     position: relative;
-    min-height: 85vh;
+    min-height: 90vh;
     max-width: 1200px;
   }
 
@@ -534,34 +541,72 @@ footer .icon:hover {
     position: absolute;
     max-width: 1000px;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.4;
     overflow: hidden;
-    transition: all 1s linear;
-    height: 850px;
+    height: 950px;
     width: 87%;
+    background-color: transparent;
+    transition: all 2s linear;
+    border: 1px solid rgba(255, 171, 157, 0.5);
   }
 
   section.projects-container.not-mobile div.project * {
     visibility: hidden;
-    transition: all 0.75s linear;
   }
 
   section.projects-container.not-mobile div.project.active {
     opacity: 1;
+    background-color: black;
+    transition: all 3s linear;
   }
 
   section.projects-container.not-mobile div.project.active * {
     visibility: visible;
-    transition: all 0.75s linear;
+    transition: none;
   }
 
   section.projects-container.not-mobile article.project {
     text-align: justify;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin: 0 auto;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+  }
+
+  .image-layout {
+    width: 80%;
+  }
+
+  section.projects-container.not-mobile div.project span.vertical-title {
+    display: block;
+    visibility: visible;
+    writing-mode: vertical-rl; /* Or vertical-lr for the other direction */
+    text-orientation: upright;
+    text-transform: uppercase;
+    font-size: smaller;
+    position: absolute;
+    top: 0.5%;
+    color: rgba(255, 171, 157, 0.75);
+  }
+
+  span.vertical-title:hover {
+    transition: all 0.3s linear;
+  }
+
+  span.vertical-title.right {
+    right: -12px;
+  }
+
+  span.vertical-title.left {
+    left: -12px;
+  }
+
+  section.projects-container.not-mobile div.project.active span.vertical-title {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -585,21 +630,29 @@ footer .icon:hover {
   }
 
   .description{
-    width: 41%;
+    width: 30%;
   }
 
   .image-layout {
-    width: 47%;
+    width: 60%;
   }
 
   section.projects-container.not-mobile {
-    min-height: 65vh;
+    min-height: 80vh;
   }
 
   section.projects-container.not-mobile div.project {
-    height: 600px;
+    height: 700px;
     width: 90%;
     padding: 2rem 0rem;
+  }
+
+  span.vertical-title.right {
+    right: 5px;
+  }
+
+  span.vertical-title.left {
+    left: 5px;
   }
 
 }
