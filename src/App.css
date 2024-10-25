@@ -262,10 +262,6 @@ section.projects-container {
   flex: 0 0 auto;
 }
 
-span.vertical-title {
-  display: none;
-}
-
 div.project {
   /* box-shadow: rgba(149, 157, 165, 0.1) 0px 4px 12px; */
   /* box-shadow: 5px 0 10px rgba(255, 255, 255, 0.3); */
@@ -540,7 +536,10 @@ footer .icon:hover {
   section.projects-container.not-mobile {
     margin: 1rem auto;
     position: relative;
-    min-height: 90vh;
+  }
+
+  .all-projects {
+    min-height: 80vh;
     max-width: 1400px;
   }
 
@@ -550,7 +549,7 @@ footer .icon:hover {
     cursor: pointer;
     opacity: 0.6;
     overflow: hidden;
-    height: 950px;
+    height: 900px;
     width: 87%;
     background-color: transparent;
     border: 1px solid rgba(255, 171, 157, 0.5);
@@ -584,7 +583,7 @@ footer .icon:hover {
   section.projects-container.not-mobile div.project::after {
     content: var(--title-content);
     position: absolute;
-    max-width: 10px; /* Ajuste selon tes besoins */
+    max-width: 10px;
     word-break: break-all;
     text-transform: uppercase;
     top: 20px;
@@ -644,8 +643,8 @@ footer .icon:hover {
     width: 60%;
   }
 
-  section.projects-container.not-mobile {
-    min-height: 80vh;
+  .all-projects {
+    min-height: 62vh;
   }
 
   section.projects-container.not-mobile div.project {
@@ -653,16 +652,4 @@ footer .icon:hover {
     width: 90%;
     padding: 2rem 0rem;
   }
-
-  /* span.vertical-title.right {
-    right: 5px;
-  }
-
-  span.vertical-title.left {
-    left: 5px;
-  }
-
-  section.projects-container.not-mobile div.project span.vertical-title {
-    font-size: small;
-  } */
 }

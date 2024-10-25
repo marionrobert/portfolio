@@ -128,7 +128,9 @@ export default function ProjectsContainer() {
           {renderProjects()}
         </div>
       ) : (
-        renderProjects()
+        <div className="all-projects">
+          {renderProjects()}
+        </div>
       )}
     </section>
   );
