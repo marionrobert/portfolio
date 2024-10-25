@@ -8,8 +8,8 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, description, technolo
   return (
     <article className="project" id={title}>
       <h3>{title}</h3>
-      <span className="vertical-title right">{title}</span>
-      <span className="vertical-title left">{title}</span>
+      {/* <span className="vertical-title right">{title}</span>
+      <span className="vertical-title left">{title}</span> */}
       <div className="description">
         <p>{description}</p>
         <ul className="list-tech-stack">

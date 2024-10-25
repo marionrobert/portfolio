@@ -105,7 +105,8 @@ export default function ProjectsContainer() {
         style={isMobile ? undefined : {
           zIndex: project.id === activeProject ? 10 : projects.length - Math.abs(project.id - activeProject),
           left: `${(project.id - 1) * 25}px`, // Ajustez la position
-        }}
+          '--title-content': `"${project.name}"` } as React.CSSProperties
+        }
       >
         <Project
           title={t(`projects.${project.name}.title`)}
