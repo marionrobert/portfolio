@@ -20,8 +20,8 @@
     "button": "View Code",
     "harmony": {
       "title": "Harmony",
-      "description": "Harmony aims to facilitate the integration of beneficiaries of international protection by encouraging interactions and solidarity among neighbors. The web application allows users to propose or book activities to exchange services. Each help provided allows users to accumulate points to receive help in return.",
-      "features": "User session management;Search for available activities by filters;Verification of points required for booking;Moderation of activities and comments by an administrator;User notification via emails"
+      "description": "Harmony helps beneficiaries of international protection integrate by promoting interactions between neighbors. The application allows you to propose or book activities to exchange services, and each help provided allows you to accumulate points to receive help in return.",
+      "features": "User session management;Activity filtering; Points management; Content moderation by an administrator;User notification via emails"
     },
     "verdure": {
       "title": "Verdure",

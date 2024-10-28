@@ -210,7 +210,7 @@ export default function GridComponent() {
           </div>
         ))}
       </div>
-      <div className="grid-empty" style={{backgroundColor: "black"}}>
+      <div className="grid-empty">
         <h3>{t("grid")}</h3>
       </div>
       <div ref={ref} className="grid-container grid-2">
