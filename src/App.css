@@ -249,22 +249,19 @@ section.projects-container {
 
 .carousel-container {
   display: flex;
-  overflow-x: auto; /* Permet le défilement horizontal */
-  scroll-snap-type: x mandatory; /* Permet le défilement par "snap" */
-  gap: 16px; /* Espacement entre les projets */
-  padding: 16px 0; /* Espacement vertical */
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  padding: 16px 0;
 }
 
 .carousel-container  .project {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   max-width: 300px;
-  cursor: pointer;
   flex: 0 0 auto;
 }
 
 div.project {
-  /* box-shadow: rgba(149, 157, 165, 0.1) 0px 4px 12px; */
-  /* box-shadow: 5px 0 10px rgba(255, 255, 255, 0.3); */
   border-radius: 16px;
   margin: 1rem auto;
   padding: 1rem;
