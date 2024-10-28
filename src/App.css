@@ -401,6 +401,10 @@ span::before, span::after{
 
 
 /* contact component */
+section#contact {
+  padding: 0.1rem 0 2rem;
+}
+
 section#contact ul li {
   margin: 1rem 0;
 }
@@ -466,12 +470,12 @@ section#contact li svg {
 
 
 footer {
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: rgba(0, 0, 0, 0.862);
 }
 
 footer div > * {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 footer div {
@@ -587,7 +591,7 @@ footer .icon:hover {
     word-break: break-all;
     text-transform: uppercase;
     top: 20px;
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.4);
     line-height: 1.25rem;
     font-size: small;
   }
@@ -644,7 +648,7 @@ footer .icon:hover {
   }
 
   .all-projects {
-    min-height: 62vh;
+    min-height: 75vh;
   }
 
   section.projects-container.not-mobile div.project {
