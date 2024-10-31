@@ -1,9 +1,22 @@
+import React from "react";
 import CV from "../assets/CV-Marion-Robert_Dev-Fullstack(FR).pdf";
 import { useTranslation } from "react-i18next";
 import Lang from "./Lang";
 
 export default function Navbar() {
   const { t } = useTranslation();
+
+  const handleScroll = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    // event.preventDefault(); // Empêche le comportement par défaut
+    console.log("coucou")
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // Positionne l'élément au début de l'écran
+      });
+    }
+  };
 
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -18,7 +31,7 @@ export default function Navbar() {
               <a className="nav-link" href={CV} download="CV_MarionRobert.pdf">{t("navbar.curriculum")}</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#projects">{t("navbar.projects")}</a>
+              <a className="nav-link" onClick={(e) => handleScroll(e, "projects")}>{t("navbar.projects")}</a>
             </li>
             {/* <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
