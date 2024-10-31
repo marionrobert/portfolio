@@ -145,8 +145,8 @@ h2 {
 
 hr {
   border: none;
-  height: 1px;
-  background-image: linear-gradient(to right, #f0f0f0, #8f8f8f, #f0f0f0);
+  height: 2px;
+  background-image: linear-gradient(to right,#02020200, #414040, #02020200);
   width: 90%;
   max-width: 1300px;
   margin: 4rem auto;
@@ -540,7 +540,7 @@ footer .icon:hover {
   }
 
   .all-projects {
-    min-height: 80vh;
+    min-height: 110vh;
     max-width: 1400px;
   }
 
@@ -645,7 +645,7 @@ footer .icon:hover {
   }
 
   .all-projects {
-    min-height: 75vh;
+    min-height: 90vh;
   }
 
   section.projects-container.not-mobile div.project {
