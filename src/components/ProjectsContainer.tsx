@@ -121,7 +121,7 @@ export default function ProjectsContainer() {
   };
 
   return (
-    <section className={`projects-container ${!isMobile ? 'not-mobile' : ''}`}>
+    <section className={`projects-container ${!isMobile ? 'not-mobile' : ''}`} id="projects">
       <h2>{t("projects.title")}</h2>
       {isMobile ? (
         <div className="carousel-container">

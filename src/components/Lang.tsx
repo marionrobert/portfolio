@@ -51,7 +51,7 @@ const Lang = () => {
   };
 
   return (
-    <div>
+    <div className="language-switcher">
       <Select
         value={options.find(option => option.value === lang)}
         onChange={changeLanguage}

@@ -1,9 +1,22 @@
+import React from "react";
 import CV from "../assets/CV-Marion-Robert_Dev-Fullstack(FR).pdf";
 import { useTranslation } from "react-i18next";
 import Lang from "./Lang";
 
 export default function Navbar() {
   const { t } = useTranslation();
+
+  const handleScroll = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    // event.preventDefault(); // Empêche le comportement par défaut
+    console.log("coucou")
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // Positionne l'élément au début de l'écran
+      });
+    }
+  };
 
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -17,18 +30,22 @@ export default function Navbar() {
             <li className="nav-item">
               <a className="nav-link" href={CV} download="CV_MarionRobert.pdf">{t("navbar.curriculum")}</a>
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item">
+              <a className="nav-link" onClick={(e) => handleScroll(e, "projects")}>{t("navbar.projects")}</a>
+            </li>
+            {/* <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {t("navbar.projects")}
               </a>
+
               <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a className="dropdown-item" href="#Harmony">Harmony</a></li>
-                <li><a className="dropdown-item" href="#Verdure">Verdure</a></li>
-                <li><a className="dropdown-item" href="#Synopsix">Synopsix</a></li>
-                <li><a className="dropdown-item" href="#GuitarPick">GuitarPick</a></li>
-                <li><a className="dropdown-item" href="#Wall Art Works">Wall Art Works</a></li>
+                <li><a className="dropdown-item" href="#harmony">Harmony</a></li>
+                <li><a className="dropdown-item" href="#verdure">Verdure</a></li>
+                <li><a className="dropdown-item" href="#synopsix">Synopsix</a></li>
+                <li><a className="dropdown-item" href="#guitarpick">GuitarPick</a></li>
+                <li><a className="dropdown-item" href="#waw">Wall Art Works</a></li>
               </ul>
-            </li>
+            </li> */}
             <li className="nav-item">
               <a className="nav-link" href="#contact">{t("navbar.contact")}</a>
             </li>
