@@ -541,12 +541,12 @@ footer .icon:hover {
   position: absolute;
 }
 
-.part2.row {
+.timeline-item:nth-child(even) .part2 {
   flex-direction: row; /* Articles avec index pair : direction normale */
   left: 45.7%;
 }
 
-.part2.row-reverse {
+.timeline-item:nth-child(odd) .part2 {
   flex-direction: row-reverse; /* Articles avec index impair : direction inversée */
   right: 45.7%;
 }
@@ -600,7 +600,7 @@ footer .icon:hover {
 }
 
 .content {
-  width: 75%; /* Largeur maximale du contenu */
+  width: 73%; /* Largeur maximale du contenu */
   background-color: rgba(0, 0, 0, 0.05); /* Couleur de fond du contenu */
   border-radius: 8px; /* Coins arrondis */
   border: 1px solid;

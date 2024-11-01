@@ -25,11 +25,12 @@ export interface Option {
   label: string;
 }
 
-export interface Event {
+export interface Experience {
   company: string;
-  "start-time": string;
-  "end-time": string;
+  startTime: string;
+  endTime: string;
   site?: string;
   description?: string;
   features?: string;
+  color: string;
 }

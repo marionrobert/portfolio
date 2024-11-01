@@ -52,39 +52,44 @@
   },
   "experience": {
     "title": "Professional experience",
-    "experiences" : {
+    "experiences": {
       "1": {
         "company": "France Terre d'asile",
-        "start-time": "September 2019",
-        "end-time": "July 2022",
+        "startTime": "September 2019",
+        "endTime": "July 2022",
         "site": "https://www.france-terre-asile.org/",
-        "description": "",
-        "features": ""
+        "description": "This is the description for FTDA",
+        "features": "",
+        "color": "rgba(255, 182, 193, 1)"
       },
       "2": {
-        "company": "Professional retraining",
-        "start-time": "July 2022",
-        "end-time": "August 2023",
+        "company": "Professional Retraining",
+        "startTime": "July 2022",
+        "endTime": "August 2023",
         "site": "",
         "description": "",
-        "features": ""
+        "features": "",
+        "color": "rgba(255, 160, 200, 1)"
       },
       "3": {
         "company": "4.builders",
-        "start-time": "September 2023",
-        "end-time": "March 2024",
+        "startTime": "September 2023",
+        "endTime": "March 2024",
         "site": "linkedin",
         "description": "",
-        "features": "blablabla"
+        "features": "blablabla",
+        "color": "rgba(255, 105, 180, 1)"
       },
       "4": {
         "company": "Hopelapp",
-        "start-time": "August 2024",
-        "end-time": "November 2024",
+        "startTime": "August 2024",
+        "endTime": "November 2024",
         "site": "https://hopelapp.com/",
         "description": "",
-        "features": "NextJs; Typescript"
+        "features": "NextJs; Typescript",
+        "color": "rgba(219, 112, 147, 1)"
       }
     }
+
   }
 }
