@@ -1,5 +1,5 @@
 import './App.css'
-import { Contact, GridComponent, Navbar, ProjectsContainer, Footer, Presentation, Experience} from './components';
+import { Contact, GridComponent, Navbar, ProjectsContainer, Footer, Presentation, Experience, Exp2} from './components';
 
 function App() {
 
