@@ -1,17 +1,8 @@
 import { useTranslation } from "react-i18next";
-
-interface Event {
-  company: string;
-  "start-time": string;
-  "end-time": string;
-  site?: string;
-  description?: string;
-  features?: string;
-}
+import { Event } from "../types";
 
 export default function Experience() {
   const { t } = useTranslation("");
-
   const events = Object.values(t("experience.experiences", { returnObjects: true }) as Record<string, Event>);
 
   return (
@@ -37,7 +28,6 @@ export default function Experience() {
           </div>
         ))}
       </div>
-
     </section>
   )
 }

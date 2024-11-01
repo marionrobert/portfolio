@@ -24,3 +24,12 @@ export interface Option {
   value: Language;
   label: string;
 }
+
+export interface Event {
+  company: string;
+  "start-time": string;
+  "end-time": string;
+  site?: string;
+  description?: string;
+  features?: string;
+}
