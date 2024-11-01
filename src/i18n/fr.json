@@ -2,6 +2,7 @@
   "navbar" : {
     "curriculum": "Mon CV",
     "projects": "Mes projets",
+    "experience": "Expérience",
     "contact": "Contactez-moi"
   },
   "presentation": {
@@ -43,11 +44,47 @@
       "description": "Wall Art Works est un site marchand spécialisé dans la vente de tableaux générés par intelligence artificielle.",
       "features": "Authentification via OmniAuth Google Facebook;Recherche des produits par mots-clés;Tableau de bord administrateur;Prévisualisation virtuelle d'environnement;Gestion du panier, paiement via Stripe"
     }
-  }
-  ,
+  },
   "contact": {
     "title": "Contactez-moi",
     "city": "Montréal, Québec, Canada",
     "button": "Envoyer un email"
+  },
+  "experience": {
+    "title": "Expérience professionnelle",
+    "experiences" : {
+      "1": {
+        "company": "France Terre d'asile",
+        "start-time": "Septembre 2019",
+        "end-time": "Juillet 2022",
+        "site": "https://www.france-terre-asile.org/",
+        "description": "",
+        "features": ""
+      },
+      "2": {
+        "company": "Reconversion professionnelle",
+        "start-time": "Juillet 2022",
+        "end-time": "Août 2023",
+        "site": "",
+        "description": "",
+        "features": ""
+      },
+      "3": {
+        "company": "4.builders",
+        "start-time": "Septembre 2023",
+        "end-time": "Mars 2024",
+        "site": "linkedin",
+        "description": "",
+        "features": "blablabla"
+      },
+      "4": {
+        "company": "Hopelapp",
+        "start-time": "Août 2024",
+        "end-time": "Novembre 2024",
+        "site": "https://hopelapp.com/",
+        "description": "",
+        "features": "NextJs; Typescript"
+      }
+    }
   }
 }

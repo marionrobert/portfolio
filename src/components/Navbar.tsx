@@ -32,6 +32,9 @@ export default function Navbar() {
                 <li><a className="dropdown-item" href="#waw">Wall Art Works</a></li>
               </ul>
             </li> */}
+             <li className="nav-item">
+              <a className="nav-link" href="#experience">{t("navbar.experience")}</a>
+            </li>
             <li className="nav-item">
               <a className="nav-link" href="#contact">{t("navbar.contact")}</a>
             </li>

@@ -40,7 +40,7 @@ body {
 	line-height: 1.25;
   text-align: center;
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(12, 12, 12, 0.985);
   color: whitesmoke;
   word-break: break-word;
 }
@@ -115,7 +115,8 @@ a.navbar-brand {
 }
 
 .language-switcher {
-  width: 100px;
+  max-width: 100px;
+  padding-left: 1rem;
 }
 
 hr {

@@ -2,6 +2,7 @@
   "navbar" : {
     "curriculum": "My resume",
     "projects": "My projects",
+    "experience": "Experience",
     "contact": "Contact me"
   },
   "presentation": {
@@ -48,5 +49,42 @@
     "title": "Contact me",
     "city": "Montreal, Quebec, Canada",
     "button": "Send an email"
+  },
+  "experience": {
+    "title": "Professional experience",
+    "experiences" : {
+      "1": {
+        "company": "France Terre d'asile",
+        "start-time": "September 2019",
+        "end-time": "July 2022",
+        "site": "https://www.france-terre-asile.org/",
+        "description": "",
+        "features": ""
+      },
+      "2": {
+        "company": "Professional retraining",
+        "start-time": "July 2022",
+        "end-time": "August 2023",
+        "site": "",
+        "description": "",
+        "features": ""
+      },
+      "3": {
+        "company": "4.builders",
+        "start-time": "September 2023",
+        "end-time": "March 2024",
+        "site": "linkedin",
+        "description": "",
+        "features": "blablabla"
+      },
+      "4": {
+        "company": "Hopelapp",
+        "start-time": "August 2024",
+        "end-time": "November 2024",
+        "site": "https://hopelapp.com/",
+        "description": "",
+        "features": "NextJs; Typescript"
+      }
+    }
   }
 }
