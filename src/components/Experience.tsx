@@ -11,7 +11,6 @@ const Timeline = () => {
       <h2>{t("experience.title")}</h2>
       <div className="timeline">
         <div className="vertical-line" />
-
         {experiences.map((experience) => (
           <TimelineItem
             key={experience.company}

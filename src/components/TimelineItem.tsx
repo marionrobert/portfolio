@@ -9,6 +9,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ startTime, company, descrip
       <div className="part1">
         <p>{startTime}</p>
       </div>
+      <span>{startTime}</span>
       <div className="part2">
         <aside className="circles">
           <div className="circle large" />

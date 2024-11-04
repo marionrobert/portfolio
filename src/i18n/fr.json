@@ -67,8 +67,8 @@
         "startTime": "Juillet 2022",
         "endTime": "Août 2023",
         "site": "",
-        "description": "Acquisition de compétences professionnelles en développement web à travers deux bootcamps au sein du Wagon et de la 3w Academy.",
-        "technologies": "Ruby; ROR; HTML/CSS; JavaScript; React; NodeJS; Git/Github",
+        "description": "Acquisition de compétences en développement web à travers deux bootcamps au sein du Wagon et de la 3w Academy.",
+        "technologies": "Ruby/ROR; HTML/CSS; JavaScript; React; NodeJS; Git/Github",
         "color": "rgba(255, 160, 200, 1)"
       },
       "3": {
