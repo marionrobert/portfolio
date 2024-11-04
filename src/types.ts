@@ -30,6 +30,6 @@ export interface TimelineItemProps {
   startTime: string;
   site: string | undefined;
   description: string;
-  features: string;
+  technologies: string;
   color: string;
 }

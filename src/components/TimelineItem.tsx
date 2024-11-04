@@ -1,7 +1,9 @@
 import React from 'react';
 import { TimelineItemProps } from '../types';
 
-const TimelineItem: React.FC<TimelineItemProps> = ({ startTime, company, description, features, color, site }) => {
+const TimelineItem: React.FC<TimelineItemProps> = ({ startTime, company, description, technologies, color, site }) => {
+  const technologiesArray = technologies.split(';');
+
   return (
     <article className="timeline-item">
       <div className="part1">
@@ -19,7 +21,11 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ startTime, company, descrip
         <div className="content" style={{ borderColor: color }}>
           <h3 style={{ color: color }}>{company}</h3>
           <p>{description}</p>
-          <p>{features}</p>
+          <ul className="list-tech-stack">
+          {technologiesArray.map((tech, index) => (
+              <li key={index}>{tech}</li>
+            ))}
+          </ul>
           { site && <a href={site}></a>}
         </div>
       </div>

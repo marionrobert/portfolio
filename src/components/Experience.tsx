@@ -18,7 +18,7 @@ const Timeline = () => {
             startTime={experience.startTime}
             company={experience.company}
             description={experience.description}
-            features={experience.features}
+            technologies={experience.technologies}
             color={experience.color}
             site={experience.site}
           />

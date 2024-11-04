@@ -266,15 +266,14 @@ article.project h4 {
   margin: 1.5rem 0 0.5rem;
 }
 
-ul.list-tech-stack {
+article.project ul.list-tech-stack {
   display: flex;
   flex-wrap:wrap;
   justify-content: center;
   margin: 1rem 0;
 }
 
-ul.list-tech-stack li {
-  background-color: rgba(255, 171, 157, 0.8);
+article.project ul.list-tech-stack li {
   color: white;
   padding: 0.5rem;
   border-radius: 5px;
@@ -282,7 +281,11 @@ ul.list-tech-stack li {
   font-size: 0.8rem;
 }
 
-ul.features {
+article.project ul.list-tech-stack li {
+  background-color: rgba(255, 171, 157, 0.8);
+}
+
+article.project ul.features {
   list-style-type: circle;
   margin-left: 2.5rem;
 }
@@ -782,5 +785,67 @@ footer .icon:hover {
     height: 700px;
     width: 90%;
     padding: 2rem 0rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .vertical-line {
+    left: 10.2%;
+  }
+
+  .timeline {
+    width: 100%;
+  }
+
+  .timeline-item {
+    border: 1px solid green;
+    flex-direction: row;
+
+  }
+
+  .timeline-item:nth-child(odd){
+    flex-direction: row;
+  }
+
+  .timeline-item:nth-child(odd) .part2 {
+    flex-direction: row;
+    right: 0;
+    left: 0;
+  }
+
+  .timeline-item:nth-child(even) .part2 {
+    right: 0;
+    left: 0;
+  }
+
+  .timeline-item .part1 {
+    border: 1px solid blue;
+    width: 12%;
+    font-size: 0.75rem;
+    flex-direction: row;
+    display: none;
+  }
+
+  .timeline-item .part2 {
+    flex-direction: row;
+    border: 1px solid red;
+    width: 100%;
+    margin: 5rem 0;
+    position: relative;
+  }
+
+  .part2 {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .circles {
+    width: 20%;
+    height: 3rem;
+  }
+
+  .content {
+    width: 70%;
   }
 }
