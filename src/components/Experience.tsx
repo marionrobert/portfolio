@@ -7,6 +7,7 @@ const Timeline = () => {
 
   return (
     <div className="timeline-container">
+      <h2>{t("experience.title")}</h2>
       <div className="timeline">
         <div className="vertical-line" />
 
@@ -27,7 +28,7 @@ const Timeline = () => {
               <div className="content" style={{ borderColor: experience.color }}>
                 <h3 style={{ color: experience.color }}>{experience.company}</h3>
                 <p>{experience.description}</p>
-                <p>{experience.features || ""}</p> {/* Vous pouvez afficher d'autres propriétés comme description si nécessaire */}
+                <p>{experience.features || ""}</p>
               </div>
             </div>
           </article>

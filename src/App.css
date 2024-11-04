@@ -487,9 +487,16 @@ footer .icon:hover {
 .timeline-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   min-height: 80vh;
   margin: 5rem auto;
 }
+
+.timeline-container h2 {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
 
 .timeline {
   position: relative;
@@ -522,6 +529,7 @@ footer .icon:hover {
   width: 40%;
   margin: 5rem 0;
   text-align: right;
+  font-weight: bold;
 }
 
 .timeline-item:nth-child(odd) .part1 {
@@ -572,8 +580,8 @@ footer .icon:hover {
 .circle.large {
   width: 4rem; /* Taille du cercle large */
   height: 4rem;
-  border: 1px solid rgb(134, 136, 140);
-  opacity: 0.1;
+  border: 1px solid rgb(203, 204, 207);
+  opacity: 0.3;
 }
 
 .circle.medium {
@@ -607,6 +615,12 @@ footer .icon:hover {
   font-size: 0.8rem;
   margin: 0;
   padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .content h3 {
