@@ -7,3 +7,4 @@ export { default as Footer} from "./Footer";
 export { default as Presentation } from "./Presentation";
 export { default as Lang } from './Lang';
 export { default as Experience } from './Experience';
+export { default as TimelineItem } from "./TimelineItem";

@@ -25,12 +25,11 @@ export interface Option {
   label: string;
 }
 
-export interface Experience {
+export interface TimelineItemProps {
   company: string;
   startTime: string;
-  endTime: string;
-  site?: string;
-  description?: string;
-  features?: string;
+  site: string | undefined;
+  description: string;
+  features: string;
   color: string;
 }
