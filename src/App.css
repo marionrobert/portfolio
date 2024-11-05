@@ -116,7 +116,7 @@ a.navbar-brand {
 
 .language-switcher {
   max-width: 100px;
-  padding-left: 1rem;
+  margin: 0 1rem;
 }
 
 hr {
@@ -624,10 +624,10 @@ footer .icon:hover {
   padding: 1rem 0;
   background: rgba(255, 255, 255, 0.09);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px) saturate(180%);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .content h3 {
@@ -685,7 +685,7 @@ footer .icon:hover {
     position: absolute;
     padding: 0.5rem 0.2rem;
     left: -20px;
-    top: 75px;
+    top: 18%;
     font-size: 0.75rem;
     width: 70px;
     font-weight: bold;
@@ -704,7 +704,7 @@ footer .icon:hover {
 
   .content {
     width: 75%;
-    min-height: 250px;
+    /* min-height: 250px; */
   }
 
   .content .start-time {
@@ -826,7 +826,7 @@ footer .icon:hover {
 
 @media screen and (min-width: 1024px){
   .grids {
-    max-width: 1200px;
+    max-width: 1000px;
   }
 
   .grid-empty h3 {

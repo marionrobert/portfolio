@@ -22,17 +22,17 @@
     "harmony": {
       "title": "Harmony",
       "description": "Harmony aide les bénéficiaires de la protection internationale à s'intégrer en favorisant les interactions entre voisins. L'application permet de proposer ou de réserver des activités pour échanger des services, et chaque aide fournie permet d'accumuler des points pour recevoir de l'aide en retour.",
-      "features": "Gestion des sessions utilisateurs;Filtrage des activités;Gestion des points;Modération du contenu par un administrateur;Notification de l'utilisateur par emails"
+      "features": "Sessions utilisateurs;Filtrage des activités; Modération du contenu par un administrateur;Notification de l'utilisateur par emails"
     },
     "verdure": {
       "title": "Verdure",
       "description": "Verdure est une application web de vente de plantes d'intérieur.",
-      "features": "Gestion des sessions utilisateurs;Gestion du panier;Gestion du paiement avec Stripe;Dashboard administrateur et utilisateur;Suivi et mise à jour de l'état des commandes"
+      "features": "Sessions utilisateurs; Panier; Paiement avec Stripe;Dashboard administrateur et utilisateur pour le suivi et la mise à jour de l'état des commandes"
     },
     "synopsix": {
       "title": "Synopsix",
       "description": "Synopsix est un jeu dont le but est de retrouver le titre d'un film à partir de son synopsis.",
-      "features": "Affichage des mots devinés en fonction de leur score de proximité;Visualisation d'indices;Classement des meilleurs joueurs;Choix du mode de jeu et de la catégorie de films"
+      "features": "Affichage des mots en fonction de leur score de proximité;Visualisation d'indices;Classement des meilleurs joueurs;Choix du mode de jeu et de la catégorie de films"
     },
     "guitarpick": {
       "title": "GuitarPick",
@@ -42,7 +42,7 @@
     "waw": {
       "title": "Wall Art Works",
       "description": "Wall Art Works est un site marchand spécialisé dans la vente de tableaux générés par intelligence artificielle.",
-      "features": "Authentification via OmniAuth Google Facebook;Recherche des produits par mots-clés;Tableau de bord administrateur;Prévisualisation virtuelle d'environnement;Gestion du panier, paiement via Stripe"
+      "features": "OmniAuth Google & Facebook;Recherche des produits par mots-clés;Prévisualisation virtuelle d'environnement;Gestion du panier, paiement via Stripe"
     }
   },
   "contact": {
@@ -59,7 +59,7 @@
         "endTime": "Juillet 2022",
         "site": "https://www.france-terre-asile.org/",
         "description": "Intervenante juridique auprès des demandeurs d'asile.",
-        "technologies": "Droit de l'asile; Droit de l'immigration; Analyse; Argumentation; Conseils juridiques",
+        "technologies": "Droit; Analyse; Argumentation; Conseils juridiques",
         "color": "rgba(255, 182, 193, 1)"
       },
       "2": {
@@ -77,7 +77,7 @@
         "endTime": "Mars 2024",
         "site": "linkedin",
         "description": "Création d'un site vitrine pour promouvoir le lancement d'un jeu de rôle tactique et éducatif sur mobile dans lequel les joueurs incarnent des professionnels du numérique et développent leurs compétences tout en s'amusant.",
-        "technologies": "AWS Amplify; Cognito; DynamoDB; AWS Lambda; Stripe API",
+        "technologies": "AWS Amplify; Cognito; DynamoDB; AWS Lambda; Stripe",
         "color": "rgba(255, 105, 180, 1)"
       },
       "4": {
@@ -86,7 +86,7 @@
         "endTime": "Novembre 2024",
         "site": "https://hopelapp.com/",
         "description": "Création d'un site vitrine pour l'entreprise Hopelapp.",
-        "technologies": "NextJs; TypeScript; HTML/CSS; Appels API; Fonction de filtrage",
+        "technologies": "NextJs; TypeScript; HTML/CSS; API",
         "color": "rgba(219, 112, 147, 1)"
       }
     }

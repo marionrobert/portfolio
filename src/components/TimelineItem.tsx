@@ -19,7 +19,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ startTime, company, descrip
         </aside>
 
         <div className="horizontal-line" style={{ backgroundColor: color }} />
-        <div className="content" style={{ borderColor: color }}>
+        <div className="content">
           <h3 style={{ color: color }}>{company}</h3>
           <p>{description}</p>
           <ul className="list-tech-stack">
