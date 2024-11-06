@@ -318,7 +318,7 @@ article.project {
 
 article.project h3 {
   text-align: center;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.5rem;
   font-size: 1.5rem;
 }
 
@@ -854,7 +854,7 @@ footer .icon:hover {
   }
 
   .all-projects {
-    min-height: 105vh;
+    min-height: 100vh;
     max-width: 1400px;
   }
 
@@ -864,7 +864,7 @@ footer .icon:hover {
     cursor: pointer;
     opacity: 0.6;
     overflow: hidden;
-    height: 800px;
+    height: 750px;
     width: 87%;
     background-color: transparent;
     border: 1px solid rgba(255, 171, 157, 0.5);
@@ -929,7 +929,7 @@ footer .icon:hover {
 
   .image-layout {
     width: 80%;
-    height: 350px;
+    height: 325px;
   }
 }
 
