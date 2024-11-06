@@ -1,7 +1,7 @@
 import React from 'react';
 import { TimelineItemProps } from '../types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt, faArrowRight, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 const TimelineItem: React.FC<TimelineItemProps> = ({ startTime, company, description, technologies, color, site }) => {
