@@ -1,5 +1,8 @@
 import React from 'react';
 import { TimelineItemProps } from '../types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt, faArrowRight, faGlobe } from '@fortawesome/free-solid-svg-icons';
+
 
 const TimelineItem: React.FC<TimelineItemProps> = ({ startTime, company, description, technologies, color, site }) => {
   const technologiesArray = technologies.split(';');
@@ -27,7 +30,9 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ startTime, company, descrip
               <li key={index}>{tech}</li>
             ))}
           </ul>
-        { site && <a href={site}>Accéder au site</a>}
+        { site && <a href={site} target="_blank">
+          <FontAwesomeIcon icon={faExternalLinkAlt} />
+        </a>}
         </div>
       </div>
     </article>

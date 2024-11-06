@@ -21,28 +21,28 @@
     "button": "Voir le code",
     "harmony": {
       "title": "Harmony",
-      "description": "Harmony aide les bénéficiaires de la protection internationale à s'intégrer en favorisant les interactions entre voisins. L'application permet de proposer ou de réserver des activités pour échanger des services, et chaque aide fournie permet d'accumuler des points pour recevoir de l'aide en retour.",
-      "features": "Sessions utilisateurs;Filtrage des activités; Modération du contenu par un administrateur;Notification de l'utilisateur par emails"
+      "description": "Harmony aide les réfugiés à s'intégrer en facilitant les interactions locales. L'application permet de proposer ou de réserver des activités pour échanger des services et accumuler des points en échange d'aide future.",
+      "features": "Sessions utilisateurs; Filtrage des activités; Modération du contenu par l'administrateur; Notifications par e-mail"
     },
     "verdure": {
       "title": "Verdure",
-      "description": "Verdure est une application web de vente de plantes d'intérieur.",
-      "features": "Sessions utilisateurs; Panier; Paiement avec Stripe;Dashboard administrateur et utilisateur pour le suivi et la mise à jour de l'état des commandes"
-    },
-    "synopsix": {
-      "title": "Synopsix",
-      "description": "Synopsix est un jeu dont le but est de retrouver le titre d'un film à partir de son synopsis.",
-      "features": "Affichage des mots en fonction de leur score de proximité;Visualisation d'indices;Classement des meilleurs joueurs;Choix du mode de jeu et de la catégorie de films"
-    },
-    "guitarpick": {
-      "title": "GuitarPick",
-      "description": "GuitarPick est un site de location de guitares, développé sur le modèle d'Airbnb.",
-      "features": "Gestion des sessions utilisateurs;Géolocalisation;Recherche des produits par mots-clés;Dashboard utilisateur;Hébergement d'images dans le cloud"
+      "description": "Verdure est une application web dédiée à la vente de plantes d'intérieur.",
+      "features": "Sessions utilisateurs; Panier d'achat; Paiement via Stripe; Tableaux de bord pour le suivi des commandes par les utilisateurs et les administrateurs"
     },
     "waw": {
       "title": "Wall Art Works",
-      "description": "Wall Art Works est un site marchand spécialisé dans la vente de tableaux générés par intelligence artificielle.",
-      "features": "OmniAuth Google & Facebook;Recherche des produits par mots-clés;Prévisualisation virtuelle d'environnement;Gestion du panier, paiement via Stripe"
+      "description": "Wall Art Works est un site de vente en ligne spécialisé dans les œuvres générées par intelligence artificielle.",
+      "features": "Connexion via Google & Facebook; Recherche de produits par mots-clés; Prévisualisation d'environnement; Gestion du panier et paiement via Stripe"
+    },
+    "synopsix": {
+      "title": "Synopsix",
+      "description": "Synopsix est un jeu où les joueurs doivent deviner le titre d'un film à partir de son synopsis.",
+      "features": "Affichage de mots selon le score de proximité; Visualisation d'indices; Classement des joueurs; Choix du mode de jeu et de la catégorie de films"
+    },
+    "guitarpick": {
+      "title": "GuitarPick",
+      "description": "GuitarPick est un site de location de guitares, inspiré du modèle Airbnb.",
+      "features": "Gestion des sessions utilisateurs; Géolocalisation; Recherche de produits par mots-clés; Tableau de bord utilisateur; Hébergement d'images dans le cloud"
     }
   },
   "contact": {
@@ -75,7 +75,7 @@
         "company": "4.builders",
         "startTime": "Septembre 2023",
         "endTime": "Mars 2024",
-        "site": "linkedin",
+        "site": "https://www.linkedin.com/company/4builders-game/",
         "description": "Création d'un site vitrine pour promouvoir le lancement d'un jeu de rôle tactique et éducatif sur mobile dans lequel les joueurs incarnent des professionnels du numérique et développent leurs compétences tout en s'amusant.",
         "technologies": "AWS Amplify; Cognito; DynamoDB; AWS Lambda; Stripe",
         "color": "rgba(255, 105, 180, 1)"
