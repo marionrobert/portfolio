@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
-import { Contact, GridComponent, Navbar, ProjectsContainer, Footer, Presentation, Experience, Exp2} from './components';
+import { Contact, GridComponent, Navbar, ProjectsContainer, Footer, Presentation, Experience} from './components';
 
 function createStarryBackground() {
   const starsContainer = document.createElement('div');
