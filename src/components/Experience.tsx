@@ -7,7 +7,7 @@ const Timeline = () => {
   const experiences = Object.values(t("experience.experiences", { returnObjects: true }) as TimelineItemProps[]);
 
   return (
-    <div className="timeline-container">
+    <div className="timeline-container" id="experience">
       <h2>{t("experience.title")}</h2>
       <div className="timeline">
         <div className="vertical-line" />

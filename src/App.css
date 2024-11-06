@@ -40,9 +40,62 @@ body {
 	line-height: 1.25;
   text-align: center;
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: rgb(12, 12, 12, 0.985);
   color: whitesmoke;
   word-break: break-word;
+  background: linear-gradient(to bottom, #010101, #04050A);
+  background: linear-gradient(to bottom right, #010101, #030405, rgb(67, 99, 109));
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.starry-sky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+  animation: twinkle 3s infinite ease-in-out;
+  animation-delay: random(3)s;
+}
+
+.star:nth-child(1) {
+  width: 2px;
+  height: 2px;
+  top: 75.67%;
+  left: 54.32%;
+  animation-delay: 0.7s;
+}
+
+.star:nth-child(2) {
+  width: 3px;
+  height: 3px;
+  top: 34.12%;
+  left: 21.54%;
+  animation-delay: 2.3s;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
 }
 
 ol, ul {
@@ -600,7 +653,6 @@ footer .icon:hover {
 .circle.dot {
   width: 0.5rem; /* Taille du point central */
   height: 0.5rem;
-  background-color: rgba(34, 197, 94, 1); /* Couleur du point */
   border-radius: 50%; /* Faire du point un cercle */
 }
 
