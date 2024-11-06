@@ -15,7 +15,7 @@ function createStarryBackground() {
     star.style.left = `${Math.random() * 100}%`;
 
     // Size
-    const size = Math.random() * 2;
+    const size = Math.random() * 1.9;
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;
 

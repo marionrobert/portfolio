@@ -27,7 +27,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ startTime, company, descrip
               <li key={index}>{tech}</li>
             ))}
           </ul>
-          { site && <a href={site}></a>}
+        { site && <a href={site}>Accéder au site</a>}
         </div>
       </div>
     </article>

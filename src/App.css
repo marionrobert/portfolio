@@ -43,12 +43,10 @@ body {
   color: whitesmoke;
   word-break: break-word;
   background: linear-gradient(to bottom, #010101, #04050A);
-  background: linear-gradient(to bottom right, #010101, #030405, rgb(67, 99, 109));
+  background: linear-gradient(110deg, #010101, #030405 25%, rgb(67, 99, 109));
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 .starry-sky {
@@ -66,7 +64,7 @@ body {
   border-radius: 50%;
   width: 2px;
   height: 2px;
-  animation: twinkle 3s infinite ease-in-out;
+  animation: twinkle 2s infinite ease-in-out;
   animation-delay: random(3)s;
 }
 
@@ -88,13 +86,13 @@ body {
 
 @keyframes twinkle {
   0% {
-    opacity: 0.6;
+    opacity: 0.4;
   }
   50% {
-    opacity: 1;
+    opacity: 0.8;
   }
   100% {
-    opacity: 0.6;
+    opacity: 0.4;
   }
 }
 
@@ -141,7 +139,15 @@ h2 {
 }
 
 .navbar, .navbar ul.dropdown-menu {
-  background-color: black !important;
+  background-color: transparent !important;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(100px) saturation(2%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .navbar .container-fluid {
@@ -170,6 +176,7 @@ a.navbar-brand {
 .language-switcher {
   max-width: 100px;
   margin: 0 1rem;
+  background-color: transparent;
 }
 
 hr {
@@ -306,12 +313,13 @@ article.project {
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  font-size: 0.85rem;
 }
 
 article.project h3 {
   text-align: center;
-  margin-bottom: 2.3rem;
-  font-size: 1.7rem;
+  margin-bottom: 1.3rem;
+  font-size: 1.5rem;
 }
 
 article.project h4 {
@@ -331,7 +339,7 @@ article.project ul.list-tech-stack li {
   padding: 0.5rem;
   border-radius: 5px;
   margin: 0.2rem;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 article.project ul.list-tech-stack li {
@@ -349,10 +357,13 @@ article.project ul.features {
 
 .image-layout {
   width: 100%;
+  height: 200px;
 }
 
 .image {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
   border-radius: 5px;
 }
 
@@ -380,7 +391,7 @@ article.project ul.features {
   width: 0;
   height: 2px;
   position: absolute;
-  transition: all 0.3s linear;
+  transition: all 0.6s linear;
   background: rgba(255, 171, 157, 1);
 }
 
@@ -533,10 +544,11 @@ footer .icon {
   height: 25px;
   color: rgba(255, 171, 157, 0.8);
   padding: 0.5rem;
+  transition: color 1s ease;
 }
 
 footer .icon:hover {
-  color: rgba(255, 171, 157, 0.5);
+  color: rgb(243, 213, 207);
 }
 
 
@@ -667,19 +679,16 @@ footer .icon:hover {
 }
 
 .content {
-  width: 73%; /* Largeur maximale du contenu */
-  background-color: rgba(0, 0, 0, 0.05); /* Couleur de fond du contenu */
-  border-radius: 8px; /* Coins arrondis */
+  width: 73%;
   border: 1px solid;
   font-size: 0.8rem;
   margin: 0;
   padding: 1rem 0;
-  background: rgba(255, 255, 255, 0.09);
+  background-color: transparent;
+  backdrop-filter: blur(1px);
   border-radius: 16px;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(30px) saturate(180%);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .content h3 {
@@ -693,6 +702,8 @@ footer .icon:hover {
 .content p {
   padding: 0.5rem;
 }
+
+
 
 
 /* media queries */
@@ -799,7 +810,7 @@ footer .icon:hover {
   }
 
   .all-projects {
-    min-height: 115vh;
+    min-height: 105vh;
     max-width: 1400px;
   }
 
@@ -809,7 +820,7 @@ footer .icon:hover {
     cursor: pointer;
     opacity: 0.6;
     overflow: hidden;
-    height: 900px;
+    height: 800px;
     width: 87%;
     background-color: transparent;
     border: 1px solid rgba(255, 171, 157, 0.5);
@@ -819,6 +830,7 @@ footer .icon:hover {
   section.projects-container.not-mobile div.project.active {
     opacity: 1;
     background-color: rgb(10, 10, 10);
+    background-color: #0E1619;
   }
 
   section.projects-container.not-mobile div.project article.project {
@@ -835,8 +847,8 @@ footer .icon:hover {
 
   section.projects-container.not-mobile div.project.active article.project {
     opacity: 1;
-    transition-delay: 1s;
-    transition: opacity 2s ease-in;
+    transition-delay: 0.75s;
+    transition: opacity 1.75s ease-in;
   }
 
   section.projects-container.not-mobile div.project::before,
@@ -873,6 +885,7 @@ footer .icon:hover {
 
   .image-layout {
     width: 80%;
+    height: 350px;
   }
 }
 
@@ -896,19 +909,20 @@ footer .icon:hover {
   }
 
   .description{
-    width: 30%;
+    width: 35%;
   }
 
   .image-layout {
-    width: 60%;
+    width: 55%;
+    height: 430px;
   }
 
   .all-projects {
-    min-height: 90vh;
+    min-height: 80vh;
   }
 
   section.projects-container.not-mobile div.project {
-    height: 700px;
+    height: 570px;
     width: 90%;
     padding: 2rem 0rem;
   }
