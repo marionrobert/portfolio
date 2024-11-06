@@ -24,3 +24,12 @@ export interface Option {
   value: Language;
   label: string;
 }
+
+export interface TimelineItemProps {
+  company: string;
+  startTime: string;
+  site: string | undefined;
+  description: string;
+  technologies: string;
+  color: string;
+}

@@ -2,6 +2,7 @@
   "navbar" : {
     "curriculum": "My resume",
     "projects": "My projects",
+    "experience": "Experience",
     "contact": "Contact me"
   },
   "presentation": {
@@ -16,37 +17,79 @@
   "grid": "My tech stack",
   "projects": {
     "title": "My Projects",
-    "features": "Main Features:",
+    "features": "Key Features:",
     "button": "View Code",
     "harmony": {
       "title": "Harmony",
-      "description": "Harmony helps beneficiaries of international protection integrate by promoting interactions between neighbors. The application allows you to propose or book activities to exchange services, and each help provided allows you to accumulate points to receive help in return.",
-      "features": "User session management;Activity filtering; Points management; Content moderation by an administrator;User notification via emails"
+      "description": "Harmony helps refugees integrate by fostering local interactions. The app allows users to offer or book activities to exchange services and earn points for future assistance.",
+      "features": "User sessions; Activity filtering; Content moderation by admin; Email notifications"
     },
     "verdure": {
       "title": "Verdure",
-      "description": "Verdure is a web application for selling indoor plants.",
-      "features": "User session management;Cart management;Payment management with Stripe;Administrator and user dashboard;Tracking and updating order status"
-    },
-    "synopsix": {
-      "title": "Synopsix",
-      "description": "Synopsix is a game where the goal is to guess the title of a movie based on its synopsis.",
-      "features": "Display of guessed words based on their proximity score;Visualization of clues;Ranking of top players;Choice of game mode and movie category"
-    },
-    "guitarpick": {
-      "title": "GuitarPick",
-      "description": "GuitarPick is a guitar rental site developed on the Airbnb model.",
-      "features": "User session management;Geolocation;Search for products by keywords;User dashboard;Image hosting in the cloud"
+      "description": "Verdure is a web application for indoor plant sales.",
+      "features": "User sessions; Shopping cart; Payment via Stripe; Dashboards for order tracking by users and admins"
     },
     "waw": {
       "title": "Wall Art Works",
-      "description": "Wall Art Works is an e-commerce site specializing in selling AI-generated paintings.",
-      "features": "Authentication via OmniAuth Google Facebook;Search for products by keywords;Administrator dashboard;Virtual environment preview;Cart management, payment via Stripe"
+      "description": "Wall Art Works is an online store specializing in AI-generated artwork.",
+      "features": "Google & Facebook login; Product search by keywords; Virtual environment preview; Cart management and Stripe payment"
+    },
+    "synopsix": {
+      "title": "Synopsix",
+      "description": "Synopsix is a game where players guess a movie title based on its synopsis.",
+      "features": "Word display by proximity score; Hint visualization; Player leaderboard; Game mode and category selection"
+    },
+    "guitarpick": {
+      "title": "GuitarPick",
+      "description": "GuitarPick is a guitar rental site inspired by the Airbnb model.",
+      "features": "User sessions; Geolocation; Product search by keywords; User dashboard; Cloud image hosting"
     }
   },
   "contact": {
     "title": "Contact me",
     "city": "Montreal, Quebec, Canada",
     "button": "Send an email"
+  },
+  "experience": {
+    "title": "Professional experience",
+    "experiences": {
+      "1": {
+      "company": "France Terre d'asile",
+      "startTime": "September 2019",
+      "endTime": "July 2022",
+      "site": "https://www.france-terre-asile.org/",
+      "description": "Legal advisor for asylum seekers.",
+      "technologies": "Law; Analysis; Argumentation; Legal advice",
+      "color": "rgba(255, 182, 193, 1)"
+      },
+      "2": {
+      "company": "Professional retraining",
+      "startTime": "July 2022",
+      "endTime": "August 2023",
+      "site": "",
+      "description": "Acquisition of skills in web development through two bootcamps at Le Wagon and the 3w Academy.",
+      "technologies": "Ruby/ROR; HTML/CSS; JavaScript; React; NodeJS; Git/Github",
+      "color": "rgba(255, 160, 200, 1)"
+      },
+      "3": {
+      "company": "4.builders",
+      "startTime": "September 2023",
+      "endTime": "March 2024",
+      "site": "linkedin",
+      "description": "Creation of a showcase site to promote the launch of a tactical and educational role-playing game on mobile in which players embody digital professionals and develop their skills while having fun.",
+      "technologies": "AWS Amplify; Cognito; DynamoDB; AWS Lambda; Stripe",
+      "color": "rgba(255, 105, 180, 1)"
+      },
+      "4": {
+      "company": "Hopelapp",
+      "startTime": "August 2024",
+      "endTime": "November 2024",
+      "site": "https://hopelapp.com/",
+      "description": "Creation of a showcase site for the company Hopelapp.",
+      "technologies": "NextJs; TypeScript; HTML/CSS; API",
+      "color": "rgba(219, 112, 147, 1)"
+      }
+    }
+
   }
 }
