@@ -1,22 +1,47 @@
-import CV from "../assets/CV-Marion-Robert_Dev-Fullstack(FR).pdf"
+import { useEffect } from "react";
+import CV from "../assets/CV-Marion-Robert_Dev-Fullstack(FR).pdf";
 import { useTranslation } from "react-i18next";
 import Lang from "./Lang";
-import { useEffect } from "react";
 
 export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector(".navbar");
-      if (window.scrollY > 50) { // Par exemple, 50px de défilement
+      if (window.scrollY > 10) {
         navbar?.classList.add("scrolled");
       } else {
         navbar?.classList.remove("scrolled");
       }
     };
 
+    const handleMenuToggle = () => {
+      const navbar = document.querySelector(".navbar");
+      const navbarCollapse = document.querySelector(".navbar-collapse");
+      if (navbarCollapse?.classList.contains("collapsing")) {
+        navbar?.classList.add("scrolled");
+      } else {
+        navbar?.classList.remove("scrolled");
+      }
+    };
+
+    // Ajout des écouteurs d'événements
     window.addEventListener("scroll", handleScroll);
+
+    // Gestion du clic sur le bouton burger (toggle)
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    if (navbarToggler) {
+      console.log("Navbar Toggler found");
+      navbarToggler.addEventListener("click", handleMenuToggle);
+    } else {
+      console.error("Navbar toggler not found");
+    }
+
+    // Nettoyage lors du démontage du composant
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      if (navbarToggler) {
+        navbarToggler.removeEventListener("click", handleMenuToggle);
+      }
     };
   }, []);
 
@@ -33,7 +58,7 @@ export default function Navbar() {
             <li className="nav-item">
               <a className="nav-link" href={CV} download="CV_MarionRobert.pdf">{t("navbar.curriculum")}</a>
             </li>
-             <li className="nav-item">
+            <li className="nav-item">
               <a className="nav-link" href="#experience">{t("navbar.experience")}</a>
             </li>
             <li className="nav-item">
@@ -47,5 +72,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-    )
+  );
 }

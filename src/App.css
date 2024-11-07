@@ -137,7 +137,7 @@ h2 {
   font-size: 2rem;
 }
 
-.navbar, .navbar ul.dropdown-menu {
+.navbar {
   background-color: transparent !important;
   transition: background-color 0.5s ease;
 }
@@ -176,6 +176,7 @@ a.navbar-brand {
   max-width: 100px;
   margin: 0 1rem;
   background-color: transparent;
+  padding-bottom: 0.5rem;
 }
 
 hr {
