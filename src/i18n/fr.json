@@ -1,7 +1,7 @@
 {
   "navbar" : {
-    "curriculum": "Mon CV",
-    "projects": "Mes projets",
+    "curriculum": "CV",
+    "projects": "Projets",
     "experience": "Expérience",
     "contact": "Contactez-moi"
   },

@@ -37,16 +37,19 @@ const projects = [
   },
   {
     id: 3,
-    name: "synopsix",
-    image: synopsix,
-    link: "https://github.com/marionrobert/synopsix-940",
+    name: "waw",
+    image: waw,
+    link: "https://github.com/marionrobert/GUITAR_PICK",
     technologies: [
       'Ruby',
       'Rails',
       'PostgreSQL',
       'Devise',
-      'Cloudinary',
-      'Bootstrap'
+      "Pagy",
+      "Omniauth",
+      "Pg_search",
+      'Rails_admin',
+      "Ransack"
     ]
   },
   {
@@ -66,19 +69,16 @@ const projects = [
   },
   {
     id: 5,
-    name: "waw",
-    image: waw,
-    link: "https://github.com/marionrobert/GUITAR_PICK",
+    name: "synopsix",
+    image: synopsix,
+    link: "https://github.com/marionrobert/synopsix-940",
     technologies: [
       'Ruby',
       'Rails',
       'PostgreSQL',
       'Devise',
-      "Pagy",
-      "Omniauth",
-      "Pg_search",
-      'Rails_admin',
-      "Ransack"
+      'Cloudinary',
+      'Bootstrap'
     ]
   }
 ];

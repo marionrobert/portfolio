@@ -1,7 +1,7 @@
 {
   "navbar" : {
-    "curriculum": "My resume",
-    "projects": "My projects",
+    "curriculum": "Resume",
+    "projects": "Projects",
     "experience": "Experience",
     "contact": "Contact me"
   },

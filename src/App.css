@@ -42,7 +42,6 @@ body {
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: whitesmoke;
   word-break: break-word;
-  background: linear-gradient(to bottom, #010101, #04050A);
   background: linear-gradient(110deg, #010101, #030405 25%, rgb(67, 99, 109));
   margin: 0;
   padding: 0;
@@ -146,7 +145,7 @@ h2 {
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.95) !important;
   backdrop-filter: blur(100px) saturation(2%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
