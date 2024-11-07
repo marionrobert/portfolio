@@ -17,12 +17,29 @@ export default function Navbar() {
     const handleMenuToggle = () => {
       const navbar = document.querySelector(".navbar");
       const navbarCollapse = document.querySelector(".navbar-collapse");
+
+      // Vérifie si la classe "collapsing" est présente avant d'ajouter "scrolled"
       if (navbarCollapse?.classList.contains("collapsing")) {
         navbar?.classList.add("scrolled");
       } else {
         navbar?.classList.remove("scrolled");
       }
+
+      // Ajoute un écouteur d'événement 'transitionend' si ce n'est pas déjà fait
+      const handleTransitionEnd = () => {
+        console.log("Transition terminée !");
+        if (navbarCollapse?.classList.contains("show")) {
+          navbar?.classList.add("scrolled");
+        } else {
+          navbar?.classList.remove("scrolled");
+        }
+        // Retirer l'écouteur après la fin de la transition
+        navbarCollapse?.removeEventListener("transitionend", handleTransitionEnd);
+      };
+
+      navbarCollapse?.addEventListener("transitionend", handleTransitionEnd);
     };
+
 
     // Ajout des écouteurs d'événements
     window.addEventListener("scroll", handleScroll);
