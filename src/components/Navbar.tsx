@@ -27,7 +27,6 @@ export default function Navbar() {
 
       // Ajoute un écouteur d'événement 'transitionend' si ce n'est pas déjà fait
       const handleTransitionEnd = () => {
-        console.log("Transition terminée !");
         if (navbarCollapse?.classList.contains("show")) {
           navbar?.classList.add("scrolled");
         } else {
@@ -47,7 +46,6 @@ export default function Navbar() {
     // Gestion du clic sur le bouton burger (toggle)
     const navbarToggler = document.querySelector(".navbar-toggler");
     if (navbarToggler) {
-      console.log("Navbar Toggler found");
       navbarToggler.addEventListener("click", handleMenuToggle);
     } else {
       console.error("Navbar toggler not found");
