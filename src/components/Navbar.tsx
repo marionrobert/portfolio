@@ -1,4 +1,4 @@
-import CV from "../assets/CV-Marion-Robert_Dev-Fullstack(FR).pdf";
+import CV from "../assets/CV-Marion-Robert_Dev-Fullstack(FR).pdf"
 import { useTranslation } from "react-i18next";
 import Lang from "./Lang";
 import { useEffect } from "react";

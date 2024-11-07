@@ -5,25 +5,25 @@ import { useTranslation } from "react-i18next";
 import { CellPosition, Position } from "../types";
 
 const iconColorsGrid1 = [
-  { icon: html, color: '#f16529' },        // HTML - Orange
-  { icon: javascript, color: '#F7DF1E' },  // JavaScript - Yellow
-  { icon: nodeJs, color: '#8cc84b' },      // Node.js - Green
-  { icon: python, color: '#dfe2dc' },      // Python - Blue
-  { icon: css, color: '#0295de' },         // CSS - Blue
-  { icon: react, color: '#61DAFB' },       // React - Cyan
-  { icon: ror, color: 'black' },         // Ruby on Rails - Red
-  { icon: ruby, color: '#ba0f01' },        // Ruby - Red
+  { icon: html, color: '#f16529' },
+  { icon: javascript, color: '#F7DF1E' },
+  { icon: nodeJs, color: '#8cc84b' },
+  { icon: python, color: '#dfe2dc' },
+  { icon: css, color: '#0295de' },
+  { icon: react, color: '#61DAFB' },
+  { icon: ror, color: 'black' },
+  { icon: ruby, color: '#ba0f01' },
 ]
 
 const iconColorsGrid2 = [
-   { icon: postgresql, color: '#336791' },  // PostgreSQL - Blue
-  { icon: typescript, color: '#3178c6' },  // TypeScript - Blue
-  { icon: sql, color: 'black' },         // SQL - Orange
-  { icon: aws, color: '#f79400' },         // AWS - Orange
-  { icon: bootstrap, color: '#7952B3' },   // Bootstrap - Purple
-  { icon: gcp, color: '#dfe2dc' },         // GCP - Blue
-  { icon: git, color: '#F05032' },         // Git - Red
-  { icon: sass, color: '#CC6699' },        // Sass - Pink
+   { icon: postgresql, color: '#336791' },
+  { icon: typescript, color: '#3178c6' },
+  { icon: sql, color: 'black' },
+  { icon: aws, color: '#f79400' },
+  { icon: bootstrap, color: '#7952B3' },
+  { icon: gcp, color: '#dfe2dc' },
+  { icon: git, color: '#F05032' },
+  { icon: sass, color: '#CC6699' },
 ]
 
 // Object mapping grid item keys to their positions

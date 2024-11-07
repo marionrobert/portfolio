@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Project from "./Project";
-import { harmony, verdure, synopsix, waw, guitarpick } from "../assets/images/projects";
 import { useTranslation } from "react-i18next";
 import { ProjectProps } from "../types";
 
@@ -9,14 +8,6 @@ export default function ProjectsContainer() {
   const [activeProject, setActiveProject] = useState(1);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const projects = Object.values(t("projects.projects", { returnObjects: true }) as ProjectProps[]);
-
-  const projectImages: { [key in 'harmony' | 'verdure' | 'synopsix' | 'waw' | 'guitarpick']: string } = {
-    harmony: harmony,
-    verdure: verdure,
-    synopsix: synopsix,
-    waw: waw,
-    guitarpick: guitarpick,
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,7 +37,7 @@ export default function ProjectsContainer() {
           technologies={project.technologies}
           features={project.features}
           link={project.link}
-          imageSrc={projectImages[project.name as keyof typeof projectImages]}
+          image={project.image}
         />
       </div>
     ));

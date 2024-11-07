@@ -28,7 +28,7 @@
         "features": "Sessions utilisateurs; Filtrage des activités; Modération du contenu par l'administrateur; Notifications par e-mail",
         "link": "https://github.com/marionrobert/harmony-front-react",
         "technologies": "JS / NodeJS / Express.js; React; SQL / MySQL; Redux; Axios; bcrypt; GoogleAPI / nodemailer",
-        "image": "assets/images/projects/harmony/harmony.gif"
+        "image": "portfolio/assets/images/projects/harmony/harmony.gif"
       },
       {
         "id": 2,
@@ -38,7 +38,7 @@
         "features": "Sessions utilisateurs; Panier d'achat; Paiement via Stripe; Tableaux de bord pour le suivi des commandes par les utilisateurs et les administrateurs",
         "link": "https://github.com/marionrobert/verdure-front-react",
         "technologies": "JavaScript; NodeJS / Express.js; React; SQL / MySQL; Redux; Axios; bcrypt; Stripe",
-        "image": "assets/images/projects/verdure/verdure.gif"
+        "image": "portfolio/assets/images/projects/verdure/verdure.gif"
       },
       {
         "id": 3,
@@ -48,7 +48,7 @@
         "features": "Connexion via Google & Facebook; Recherche de produits par mots-clés; Prévisualisation d'environnement; Gestion du panier et paiement via Stripe",
         "link": "https://github.com/marionrobert/waw",
         "technologies": "Ruby; Rails; PostgreSQL; Devise; Pagy; Omniauth; Pg_search; Rails_admin; Ransack",
-        "image": "assets/images/projects/waw/waw.gif"
+        "image": "portfolio/assets/images/projects/waw/waw.gif"
       },
       {
         "id": 4,
@@ -58,7 +58,7 @@
         "features": "Affichage de mots selon le score de proximité; Visualisation d'indices; Classement des joueurs; Choix du mode de jeu et de la catégorie de films",
         "link": "https://github.com/marionrobert/synopsix-940",
         "technologies": "Ruby; Rails; PostgreSQL; Devise; Cloudinary; Bootstrap",
-        "image": "assets/images/projects/synopsix/synopsix.gif"
+        "image": "portfolio/assets/images/projects/synopsix/synopsix.gif"
       },
       {
         "id": 5,
@@ -68,7 +68,7 @@
         "features": "Gestion des sessions utilisateurs; Géolocalisation; Recherche de produits par mots-clés; Tableau de bord utilisateur; Hébergement d'images dans le cloud",
         "link": "https://github.com/marionrobert/GUITAR_PICK",
         "technologies": "Ruby; Rails; PostgreSQL; Devise; Cloudinary; Bootstrap",
-        "image": "assets/images/projects/guitarpick/guitarpick.gif"
+        "image": "portfolio/assets/images/projects/guitarpick/guitarpick.gif"
       }
     ]
   },

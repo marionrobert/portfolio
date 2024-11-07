@@ -1,10 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { ProjectProps } from "../types";
-interface ProjectComponentProps extends ProjectProps {
-  imageSrc: string;
-}
 
-const ProjectComponent: React.FC<ProjectComponentProps> = ({ title, name, description, technologies, features, link, imageSrc }) => {
+const ProjectComponent: React.FC<ProjectProps> = ({ title, name, description, technologies, features, link, image}) => {
   const {t} = useTranslation();
   const featuresArray = features.split(';');
   const technologiesArray = technologies.split(";")
@@ -30,7 +27,7 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ({ title, name, descri
         </a>
       </div>
       <div className="image-layout">
-        <img className="image" src={imageSrc}/>
+        <img className="image" src={image} alt={name}/>
       </div>
     </article>
   )

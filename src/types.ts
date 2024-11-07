@@ -8,6 +8,7 @@ export interface ProjectProps {
   features: string,
   link: string;
   technologies: string;
+  image: string;
 }
 
 export interface CellPosition {

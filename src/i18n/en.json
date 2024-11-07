@@ -28,7 +28,7 @@
       "features": "User sessions; Activity filtering; Content moderation by admin; Email notifications",
       "link": "https://github.com/marionrobert/harmony-front-react",
       "technologies": "JS / NodeJS / Express.js; React; SQL / MySQL; Redux; Axios; bcrypt; GoogleAPI / nodemailer",
-      "image": "assets/images/projects/harmony/harmony.gif"
+      "image": "portfolio/assets/images/projects/harmony/harmony.gif"
     },
     {
       "id": 2,
@@ -38,7 +38,7 @@
       "features": "User sessions; Shopping cart; Payment via Stripe; Dashboards for tracking orders by users and admins",
       "link": "https://github.com/marionrobert/verdure-front-react",
       "technologies": "JavaScript; NodeJS / Express.js; React; SQL / MySQL; Redux; Axios; bcrypt; Stripe",
-      "image": "assets/images/projects/verdure/verdure.gif"
+      "image": "portfolio/assets/images/projects/verdure/verdure.gif"
     },
     {
       "id": 3,
@@ -48,7 +48,7 @@
       "features": "Login via Google & Facebook; Product search by keywords; Environment preview; Cart management and payment via Stripe",
       "link": "https://github.com/marionrobert/waw",
       "technologies": "Ruby; Rails; PostgreSQL; Devise; Pagy; Omniauth; Pg_search; Rails_admin; Ransack",
-      "image": "assets/images/projects/waw/waw.gif"
+      "image": "portfolio/assets/images/projects/waw/waw.gif"
     },
     {
       "id": 4,
@@ -58,7 +58,7 @@
       "features": "Display of words according to proximity score; Hint visualization; Player rankings; Choice of game mode and movie category",
       "link": "https://github.com/marionrobert/synopsix-940",
       "technologies": "Ruby; Rails; PostgreSQL; Devise; Cloudinary; Bootstrap",
-      "image": "assets/images/projects/synopsix/synopsix.gif"
+      "image": "portfolio/assets/images/projects/synopsix/synopsix.gif"
     },
     {
       "id": 5,
@@ -68,7 +68,7 @@
       "features": "User session management; Geolocation; Product search by keywords; User dashboard; Cloud image hosting",
       "link": "https://github.com/marionrobert/GUITAR_PICK",
       "technologies": "Ruby; Rails; PostgreSQL; Devise; Cloudinary; Bootstrap",
-      "image": "assets/images/projects/guitarpick/guitarpick.gif"
+      "image": "portfolio/assets/images/projects/guitarpick/guitarpick.gif"
     }
   ]
 
