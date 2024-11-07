@@ -1,12 +1,13 @@
 import { Language } from "./enums/Language";
 
 export interface ProjectProps {
-  title: string;
+  id: number;
+  title: string,
+  name: string;
   description: string;
-  technologies: string[];
-  features: string;
-  image: string;
+  features: string,
   link: string;
+  technologies: string;
 }
 
 export interface CellPosition {

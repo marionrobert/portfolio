@@ -19,31 +19,53 @@
     "title": "Mes projets",
     "features": "Fonctionnalités principales :",
     "button": "Voir le code",
-    "harmony": {
-      "title": "Harmony",
-      "description": "Harmony aide les réfugiés à s'intégrer en facilitant les interactions locales. L'application permet de proposer ou de réserver des activités pour échanger des services et accumuler des points en échange d'aide future.",
-      "features": "Sessions utilisateurs; Filtrage des activités; Modération du contenu par l'administrateur; Notifications par e-mail"
-    },
-    "verdure": {
-      "title": "Verdure",
-      "description": "Verdure est une application web dédiée à la vente de plantes d'intérieur.",
-      "features": "Sessions utilisateurs; Panier d'achat; Paiement via Stripe; Tableaux de bord pour le suivi des commandes par les utilisateurs et les administrateurs"
-    },
-    "waw": {
-      "title": "Wall Art Works",
-      "description": "Wall Art Works est un site de vente en ligne spécialisé dans les œuvres générées par intelligence artificielle.",
-      "features": "Connexion via Google & Facebook; Recherche de produits par mots-clés; Prévisualisation d'environnement; Gestion du panier et paiement via Stripe"
-    },
-    "synopsix": {
-      "title": "Synopsix",
-      "description": "Synopsix est un jeu où les joueurs doivent deviner le titre d'un film à partir de son synopsis.",
-      "features": "Affichage de mots selon le score de proximité; Visualisation d'indices; Classement des joueurs; Choix du mode de jeu et de la catégorie de films"
-    },
-    "guitarpick": {
-      "title": "GuitarPick",
-      "description": "GuitarPick est un site de location de guitares, inspiré du modèle Airbnb.",
-      "features": "Gestion des sessions utilisateurs; Géolocalisation; Recherche de produits par mots-clés; Tableau de bord utilisateur; Hébergement d'images dans le cloud"
-    }
+    "projects": [
+      {
+        "id": 1,
+        "title": "Harmony",
+        "name": "harmony",
+        "description": "Harmony aide les réfugiés à s'intégrer en facilitant les interactions locales. L'application permet de proposer ou de réserver des activités pour échanger des services et accumuler des points en échange d'aide future.",
+        "features": "Sessions utilisateurs; Filtrage des activités; Modération du contenu par l'administrateur; Notifications par e-mail",
+        "link": "https://github.com/marionrobert/harmony-front-react",
+        "technologies": "JS / NodeJS / Express.js; React; SQL / MySQL; Redux; Axios; bcrypt; GoogleAPI / nodemailer"
+      },
+      {
+        "id": 2,
+        "title": "Verdure",
+        "name": "verdure",
+        "description": "Verdure est une application web dédiée à la vente de plantes d'intérieur.",
+        "features": "Sessions utilisateurs; Panier d'achat; Paiement via Stripe; Tableaux de bord pour le suivi des commandes par les utilisateurs et les administrateurs",
+        "link": "https://github.com/marionrobert/verdure-front-react",
+        "technologies": "JavaScript; NodeJS / Express.js; React; SQL / MySQL; Redux; Axios; bcrypt; Stripe"
+      },
+      {
+        "id": 3,
+        "title": "Wall Art Works",
+        "name": "waw",
+        "description": "Wall Art Works est un site de vente en ligne spécialisé dans les œuvres générées par intelligence artificielle.",
+        "features": "Connexion via Google & Facebook; Recherche de produits par mots-clés; Prévisualisation d'environnement; Gestion du panier et paiement via Stripe",
+        "link": "https://github.com/marionrobert/GUITAR_PICK",
+          "technologies": "Ruby; Rails; PostgreSQL; Devise; Pagy; Omniauth; Pg_search; Rails_admin; Ransack"
+      },
+      {
+        "id": 4,
+        "title": "Synopsix",
+        "name": "synopsix",
+        "description": "Synopsix est un jeu où les joueurs doivent deviner le titre d'un film à partir de son synopsis.",
+        "features": "Affichage de mots selon le score de proximité; Visualisation d'indices; Classement des joueurs; Choix du mode de jeu et de la catégorie de films",
+        "link": "https://github.com/marionrobert/GUITAR_PICK",
+          "technologies": "Ruby; Rails; PostgreSQL; Devise; Cloudinary; Bootstrap"
+      },
+      {
+        "id": 5,
+        "title": "GuitarPick",
+        "name": "guitarpick",
+        "description": "GuitarPick est un site de location de guitares, inspiré du modèle Airbnb.",
+        "features": "Gestion des sessions utilisateurs; Géolocalisation; Recherche de produits par mots-clés; Tableau de bord utilisateur; Hébergement d'images dans le cloud",
+        "link": "https://github.com/marionrobert/synopsix-940",
+        "technologies": "Ruby; Rails; PostgreSQL; Devise; Cloudinary; Bootstrap"
+      }
+    ]
   },
   "contact": {
     "title": "Contactez-moi",

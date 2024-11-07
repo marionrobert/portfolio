@@ -19,31 +19,54 @@
     "title": "My Projects",
     "features": "Key Features:",
     "button": "View Code",
-    "harmony": {
-      "title": "Harmony",
-      "description": "Harmony helps refugees integrate by fostering local interactions. The app allows users to offer or book activities to exchange services and earn points for future assistance.",
-      "features": "User sessions; Activity filtering; Content moderation by admin; Email notifications"
-    },
-    "verdure": {
-      "title": "Verdure",
-      "description": "Verdure is a web application for indoor plant sales.",
-      "features": "User sessions; Shopping cart; Payment via Stripe; Dashboards for order tracking by users and admins"
-    },
-    "waw": {
-      "title": "Wall Art Works",
-      "description": "Wall Art Works is an online store specializing in AI-generated artwork.",
-      "features": "Google & Facebook login; Product search by keywords; Virtual environment preview; Cart management and Stripe payment"
-    },
-    "synopsix": {
-      "title": "Synopsix",
-      "description": "Synopsix is a game where players guess a movie title based on its synopsis.",
-      "features": "Word display by proximity score; Hint visualization; Player leaderboard; Game mode and category selection"
-    },
-    "guitarpick": {
-      "title": "GuitarPick",
-      "description": "GuitarPick is a guitar rental site inspired by the Airbnb model.",
-      "features": "User sessions; Geolocation; Product search by keywords; User dashboard; Cloud image hosting"
-    }
+    "projects": [
+  {
+    "id": 1,
+    "title": "Harmony",
+    "name": "harmony",
+    "description": "Harmony helps refugees integrate by facilitating local interactions. The app allows users to offer or book activities, exchange services, and earn points for future help.",
+    "features": "User sessions; Activity filtering; Content moderation by administrator; Email notifications",
+    "link": "https://github.com/marionrobert/harmony-front-react",
+    "technologies": "JS / NodeJS / Express.js; React; SQL / MySQL; Redux; Axios; bcrypt; GoogleAPI / nodemailer"
+  },
+  {
+    "id": 2,
+    "title": "Verdure",
+    "name": "verdure",
+    "description": "Verdure is a web application dedicated to selling indoor plants.",
+    "features": "User sessions; Shopping cart; Stripe payment; Dashboards for order tracking by users and administrators",
+    "link": "https://github.com/marionrobert/verdure-front-react",
+    "technologies": "JavaScript; NodeJS / Express.js; React; SQL / MySQL; Redux; Axios; bcrypt; Stripe"
+  },
+  {
+    "id": 3,
+    "title": "Wall Art Works",
+    "name": "waw",
+    "description": "Wall Art Works is an online store specializing in AI-generated artwork.",
+    "features": "Google & Facebook login; Keyword-based product search; Environment preview; Cart management and Stripe payment",
+    "link": "https://github.com/marionrobert/GUITAR_PICK",
+    "technologies": "Ruby; Rails; PostgreSQL; Devise; Pagy; Omniauth; Pg_search; Rails_admin; Ransack"
+  },
+  {
+    "id": 4,
+    "title": "Synopsix",
+    "name": "synopsix",
+    "description": "Synopsix is a game where players must guess a movie title based on its synopsis.",
+    "features": "Word display based on proximity score; Clues visualization; Player leaderboard; Choice of game mode and movie category",
+    "link": "https://github.com/marionrobert/GUITAR_PICK",
+    "technologies": "Ruby; Rails; PostgreSQL; Devise; Cloudinary; Bootstrap"
+  },
+  {
+    "id": 5,
+    "title": "GuitarPick",
+    "name": "guitarpick",
+    "description": "GuitarPick is a guitar rental website inspired by the Airbnb model.",
+    "features": "User session management; Geolocation; Keyword-based product search; User dashboard; Cloud image hosting",
+    "link": "https://github.com/marionrobert/synopsix-940",
+    "technologies": "Ruby; Rails; PostgreSQL; Devise; Cloudinary; Bootstrap"
+  }
+]
+
   },
   "contact": {
     "title": "Contact me",
