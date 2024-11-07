@@ -85,13 +85,13 @@ body {
 
 @keyframes twinkle {
   0% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   100% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
 }
 
@@ -753,7 +753,7 @@ footer .icon:hover {
 @media (max-width: 768px) {
 
   .vertical-line {
-    left: 20.8px;
+    left: 20.3px;
   }
 
   .timeline {
