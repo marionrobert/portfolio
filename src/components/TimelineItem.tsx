@@ -8,7 +8,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ startTime, company, descrip
   const technologiesArray = technologies.split(';');
 
   return (
-    <article className="timeline-item">
+    <article className="timeline-item" data-aos="fade-up" data-aos-delay="500">
       <div className="part1">
         <p>{startTime}</p>
       </div>
@@ -30,9 +30,12 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ startTime, company, descrip
               <li key={index}>{tech}</li>
             ))}
           </ul>
-        { site && <a href={site} target="_blank">
-          <FontAwesomeIcon icon={faExternalLinkAlt} />
-        </a>}
+        { site && <div className='link'>
+            <a href={site} target="_blank">
+            <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </a>
+          </div>
+        }
         </div>
       </div>
     </article>

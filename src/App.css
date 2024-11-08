@@ -42,13 +42,13 @@ body {
   font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: whitesmoke;
   word-break: break-word;
-  background: linear-gradient(to bottom, #010101, #04050A);
   background: linear-gradient(110deg, #010101, #030405 25%, rgb(67, 99, 109));
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
+/* effet ciel étoilé */
 .starry-sky {
   position: fixed;
   top: 0;
@@ -86,15 +86,16 @@ body {
 
 @keyframes twinkle {
   0% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   100% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
 }
+
 
 ol, ul {
 	list-style: none;
@@ -138,7 +139,7 @@ h2 {
   font-size: 2rem;
 }
 
-.navbar, .navbar ul.dropdown-menu {
+.navbar {
   background-color: transparent !important;
   transition: background-color 0.5s ease;
 }
@@ -146,8 +147,7 @@ h2 {
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.95) !important;
   backdrop-filter: blur(100px) saturation(2%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: 0 1px 15px rgba(87, 87, 87, 0.5);
 }
 
 .navbar .container-fluid {
@@ -177,6 +177,7 @@ a.navbar-brand {
   max-width: 100px;
   margin: 0 1rem;
   background-color: transparent;
+  padding-bottom: 0.5rem;
 }
 
 hr {
@@ -190,14 +191,18 @@ hr {
 
 /* presentation */
 section.presentation {
-  margin: 0 auto 7rem;
+  margin: 0 auto;
   max-width: 1200px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 section.presentation h1 {
   text-align: center;
   font-size: 2.5rem;
-  margin: 8rem 0 3rem;
+  margin: 3rem 0;
   line-height: 1;
 }
 
@@ -224,7 +229,7 @@ section.presentation svg {
   display: flex;
   justify-content:space-around;
   flex-wrap: wrap;
-  margin: 7rem auto;
+  margin: 200px auto;
 }
 
 .grids > div {
@@ -369,15 +374,15 @@ article.project ul.features {
 
 .description a{
   display: block;
-  width: 150px;
+  width: 100px;
   position: relative;
   background: none;
   border: none;
   color: #fff;
   margin: 2rem auto !important;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 1);
   border-radius: 5px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
 }
 
 .description span{
@@ -390,7 +395,7 @@ article.project ul.features {
 .description a::before, .description a::after{
   content:"";
   width: 0;
-  height: 2px;
+  height: 1px;
   position: absolute;
   transition: all 0.6s linear;
   background: rgba(255, 171, 157, 1);
@@ -398,7 +403,7 @@ article.project ul.features {
 
 span::before, span::after{
   content:"";
-  width:2px;
+  width:1px;
   height:0;
   position: absolute;
   transition: all 0.3s linear;
@@ -445,7 +450,7 @@ span::before, span::after{
 
 /* contact component */
 section#contact {
-  margin: 3.5rem auto;
+  margin: 150px auto;
   padding: 0.1rem 0 2rem;
 }
 
@@ -516,7 +521,7 @@ section#contact li svg {
 footer {
   padding: 0.5rem;
   background-color: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 footer div > * {
@@ -727,21 +732,18 @@ footer .icon:hover {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Style pour le lien "Accéder au site" */
-.content a {
-  display: inline-block;
-  margin-top: 0;
-  padding: 0;
-  text-decoration: none;
-  font-size: 1rem;
+
+.content .link {
   width: 100%;
+  padding: 0 1rem;
+  margin-top: 0;
   text-align: right;
+  font-size: 1rem;
 }
 
 .content a svg {
   color: rgba(255, 255, 255, 0.8);
   transition: all 0.75s ease;
-  padding: 0 1rem;
 }
 
 .content a svg:hover {
@@ -754,7 +756,7 @@ footer .icon:hover {
 @media (max-width: 768px) {
 
   .vertical-line {
-    left: 20.8px;
+    left: 20.3px;
   }
 
   .timeline {
@@ -878,8 +880,7 @@ footer .icon:hover {
 
   section.projects-container.not-mobile div.project.active {
     opacity: 1;
-    background-color: rgb(10, 10, 10);
-    background-color: #0E1619;
+    background-color: #1C292E;
   }
 
   section.projects-container.not-mobile div.project article.project {
@@ -897,7 +898,7 @@ footer .icon:hover {
   section.projects-container.not-mobile div.project.active article.project {
     opacity: 1;
     transition-delay: 0.75s;
-    transition: opacity 1.75s ease-in;
+    transition: opacity 1.5s ease-in;
   }
 
   section.projects-container.not-mobile div.project::before,

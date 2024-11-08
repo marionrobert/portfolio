@@ -5,25 +5,25 @@ import { useTranslation } from "react-i18next";
 import { CellPosition, Position } from "../types";
 
 const iconColorsGrid1 = [
-  { icon: html, color: '#f16529' },        // HTML - Orange
-  { icon: javascript, color: '#F7DF1E' },  // JavaScript - Yellow
-  { icon: nodeJs, color: '#8cc84b' },      // Node.js - Green
-  { icon: python, color: '#dfe2dc' },      // Python - Blue
-  { icon: css, color: '#0295de' },         // CSS - Blue
-  { icon: react, color: '#61DAFB' },       // React - Cyan
-  { icon: ror, color: 'black' },         // Ruby on Rails - Red
-  { icon: ruby, color: '#ba0f01' },        // Ruby - Red
+  { icon: html, color: '#f16529' },
+  { icon: javascript, color: '#F7DF1E' },
+  { icon: nodeJs, color: '#8cc84b' },
+  { icon: python, color: '#dfe2dc' },
+  { icon: css, color: '#0295de' },
+  { icon: react, color: '#61DAFB' },
+  { icon: ror, color: 'black' },
+  { icon: ruby, color: '#ba0f01' },
 ]
 
 const iconColorsGrid2 = [
-   { icon: postgresql, color: '#336791' },  // PostgreSQL - Blue
-  { icon: typescript, color: '#3178c6' },  // TypeScript - Blue
-  { icon: sql, color: 'black' },         // SQL - Orange
-  { icon: aws, color: '#f79400' },         // AWS - Orange
-  { icon: bootstrap, color: '#7952B3' },   // Bootstrap - Purple
-  { icon: gcp, color: '#dfe2dc' },         // GCP - Blue
-  { icon: git, color: '#F05032' },         // Git - Red
-  { icon: sass, color: '#CC6699' },        // Sass - Pink
+   { icon: postgresql, color: '#336791' },
+  { icon: typescript, color: '#3178c6' },
+  { icon: sql, color: 'black' },
+  { icon: aws, color: '#f79400' },
+  { icon: bootstrap, color: '#7952B3' },
+  { icon: gcp, color: '#dfe2dc' },
+  { icon: git, color: '#F05032' },
+  { icon: sass, color: '#CC6699' },
 ]
 
 // Object mapping grid item keys to their positions
@@ -203,17 +203,17 @@ export default function GridComponent() {
   // Render the grid items
   return (
     <section className="grids">
-      <div ref={ref} className="grid-container grid-1">
+      <div ref={ref} className="grid-container grid-1" data-aos="fade-right" data-aos-delay="400">
         {positions.map((pos, index) => (
           <div key={index} className={`grid-item grid-item-${index+1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: iconColorsGrid1[index].color }}>
             <img src={iconColorsGrid1[index].icon} alt={`icon-${index+1}`} className="icon"/>
           </div>
         ))}
       </div>
-      <div className="grid-empty">
+      <div className="grid-empty" data-aos="fade" data-aos-delay="400" data-aos-duration="4000">
         <h3>{t("grid")}</h3>
       </div>
-      <div ref={ref} className="grid-container grid-2">
+      <div ref={ref} className="grid-container grid-2" data-aos="fade-left" data-aos-delay="400">
         {positions.map((pos, index) => (
           <div key={index} className={`grid-item grid-item-${index+1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: iconColorsGrid2[index].color }}>
             <img src={iconColorsGrid2[index].icon} alt={`icon-${index+1}`} className="icon"/>

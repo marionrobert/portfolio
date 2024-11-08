@@ -1,92 +1,13 @@
 import { useState, useEffect } from "react";
 import Project from "./Project";
-import { harmony, verdure, synopsix, waw, guitarpick } from "../assets/images/projects";
 import { useTranslation } from "react-i18next";
-
-const projects = [
-  {
-    id: 1,
-    name: "harmony",
-    image: harmony,
-    link: "https://github.com/marionrobert/harmony-front-react",
-    technologies: [
-      'JS / NodeJS / Express.js',
-      'React',
-      'SQL / MySQL',
-      'Redux',
-      'Axios',
-      'bcrypt',
-      'GoogleAPI / nodemailer'
-    ]
-  },
-  {
-    id: 2,
-    name: "verdure",
-    image: verdure,
-    link: "https://github.com/marionrobert/verdure-front-react",
-    technologies: [
-      'JavaScript',
-      'NodeJS / Express.js',
-      'React',
-      'SQL / MySQL',
-      'Redux',
-      'Axios',
-      'bcrypt',
-      'Stripe'
-    ]
-  },
-  {
-    id: 3,
-    name: "synopsix",
-    image: synopsix,
-    link: "https://github.com/marionrobert/synopsix-940",
-    technologies: [
-      'Ruby',
-      'Rails',
-      'PostgreSQL',
-      'Devise',
-      'Cloudinary',
-      'Bootstrap'
-    ]
-  },
-  {
-
-    id: 4,
-    name: "guitarpick",
-    image: guitarpick,
-    link: "https://github.com/marionrobert/GUITAR_PICK",
-    technologies: [
-      'Ruby',
-      'Rails',
-      'PostgreSQL',
-      'Devise',
-      'Cloudinary',
-      'Bootstrap'
-    ]
-  },
-  {
-    id: 5,
-    name: "waw",
-    image: waw,
-    link: "https://github.com/marionrobert/GUITAR_PICK",
-    technologies: [
-      'Ruby',
-      'Rails',
-      'PostgreSQL',
-      'Devise',
-      "Pagy",
-      "Omniauth",
-      "Pg_search",
-      'Rails_admin',
-      "Ransack"
-    ]
-  }
-];
+import { ProjectProps } from "../types";
 
 export default function ProjectsContainer() {
   const { t } = useTranslation();
   const [activeProject, setActiveProject] = useState(1);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const projects = Object.values(t("projects.projects", { returnObjects: true }) as ProjectProps[]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -99,7 +20,7 @@ export default function ProjectsContainer() {
   const renderProjects = () => {
     return projects.map((project) => (
       <div
-        key={project.id}
+        key={project.name}
         className={`project ${isMobile ? '' : (project.id === activeProject ? 'active' : '')}`}
         onClick={() => !isMobile && setActiveProject(project.id)}
         style={isMobile ? undefined : {
@@ -109,12 +30,14 @@ export default function ProjectsContainer() {
         }
       >
         <Project
-          title={t(`projects.${project.name}.title`)}
-          description={t(`projects.${project.name}.description`)}
+          id={project.id}
+          title={project.title}
+          name={project.name}
+          description={project.description}
           technologies={project.technologies}
-          features={t(`projects.${project.name}.features`)}
-          image={project.image}
+          features={project.features}
           link={project.link}
+          image={project.image}
         />
       </div>
     ));
@@ -122,13 +45,13 @@ export default function ProjectsContainer() {
 
   return (
     <section className={`projects-container ${!isMobile ? 'not-mobile' : ''}`} id="projects">
-      <h2>{t("projects.title")}</h2>
+      <h2 data-aos="fade-up">{t("projects.title")}</h2>
       {isMobile ? (
-        <div className="carousel-container">
+        <div className="carousel-container" data-aos="fade-up">
           {renderProjects()}
         </div>
       ) : (
-        <div className="all-projects">
+        <div className="all-projects" data-aos="fade-up">
           {renderProjects()}
         </div>
       )}
