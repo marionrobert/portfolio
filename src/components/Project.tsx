@@ -3,6 +3,8 @@ import { ProjectProps } from "../types";
 
 const ProjectComponent: React.FC<ProjectProps> = ({ title, name, description, technologies, features, link, image}) => {
   const {t} = useTranslation();
+  const imageBaseUrl = import.meta.env.BASE_URL;
+  const imageUrl = `${imageBaseUrl}${image}`;
   const featuresArray = features.split(';');
   const technologiesArray = technologies.split(";")
 
@@ -27,7 +29,7 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, name, description, te
         </a>
       </div>
       <div className="image-layout">
-        <img className="image" src={image} alt={name}/>
+        <img className="image" src={imageUrl} alt={name}/>
       </div>
     </article>
   )
