@@ -9,9 +9,9 @@ export default function Presentation(){
 
   return(
     <section className="presentation">
-      <h1>{t("presentation.title")}</h1>
-      <h2>{t("presentation.subtitle")}</h2>
-      <div>
+      <h1 data-aos="fade-up" data-aos-delay="400">{t("presentation.title")}</h1>
+      <h2 data-aos="fade-up" data-aos-delay="400">{t("presentation.subtitle")}</h2>
+      <div data-aos="fade-up" data-aos-delay="400">
         <p>
           <FontAwesomeIcon icon={faSpaceAwesome} className="fa-fade"/><FontAwesomeIcon icon={faLaptop} />
           {t("presentation.paragraphs.1")}

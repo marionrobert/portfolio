@@ -203,17 +203,17 @@ export default function GridComponent() {
   // Render the grid items
   return (
     <section className="grids">
-      <div ref={ref} className="grid-container grid-1">
+      <div ref={ref} className="grid-container grid-1" data-aos="fade-right" data-aos-delay="400">
         {positions.map((pos, index) => (
           <div key={index} className={`grid-item grid-item-${index+1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: iconColorsGrid1[index].color }}>
             <img src={iconColorsGrid1[index].icon} alt={`icon-${index+1}`} className="icon"/>
           </div>
         ))}
       </div>
-      <div className="grid-empty">
+      <div className="grid-empty" data-aos="fade" data-aos-delay="400" data-aos-duration="4000">
         <h3>{t("grid")}</h3>
       </div>
-      <div ref={ref} className="grid-container grid-2">
+      <div ref={ref} className="grid-container grid-2" data-aos="fade-left" data-aos-delay="400">
         {positions.map((pos, index) => (
           <div key={index} className={`grid-item grid-item-${index+1}`} style={{ gridRowStart: pos.row, gridColumnStart: pos.col, backgroundColor: iconColorsGrid2[index].color }}>
             <img src={iconColorsGrid2[index].icon} alt={`icon-${index+1}`} className="icon"/>

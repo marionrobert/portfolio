@@ -8,7 +8,7 @@ const Timeline = () => {
 
   return (
     <div className="timeline-container" id="experience">
-      <h2>{t("experience.title")}</h2>
+      <h2 data-aos="fade-up">{t("experience.title")}</h2>
       <div className="timeline">
         <div className="vertical-line" />
         {experiences.map((experience) => (

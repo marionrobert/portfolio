@@ -45,13 +45,13 @@ export default function ProjectsContainer() {
 
   return (
     <section className={`projects-container ${!isMobile ? 'not-mobile' : ''}`} id="projects">
-      <h2>{t("projects.title")}</h2>
+      <h2 data-aos="fade-up">{t("projects.title")}</h2>
       {isMobile ? (
-        <div className="carousel-container">
+        <div className="carousel-container" data-aos="fade-up">
           {renderProjects()}
         </div>
       ) : (
-        <div className="all-projects">
+        <div className="all-projects" data-aos="fade-up">
           {renderProjects()}
         </div>
       )}

@@ -191,14 +191,18 @@ hr {
 
 /* presentation */
 section.presentation {
-  margin: 0 auto 7rem;
+  margin: 0 auto;
   max-width: 1200px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 section.presentation h1 {
   text-align: center;
   font-size: 2.5rem;
-  margin: 8rem 0 3rem;
+  margin: 3rem 0;
   line-height: 1;
 }
 
@@ -225,7 +229,7 @@ section.presentation svg {
   display: flex;
   justify-content:space-around;
   flex-wrap: wrap;
-  margin: 7rem auto;
+  margin: 200px auto;
 }
 
 .grids > div {
@@ -446,7 +450,7 @@ span::before, span::after{
 
 /* contact component */
 section#contact {
-  margin: 3.5rem auto;
+  margin: 150px auto;
   padding: 0.1rem 0 2rem;
 }
 
