@@ -48,6 +48,7 @@ body {
   height: 100%;
 }
 
+/* effet ciel étoilé */
 .starry-sky {
   position: fixed;
   top: 0;
@@ -94,6 +95,7 @@ body {
     opacity: 0.3;
   }
 }
+
 
 ol, ul {
 	list-style: none;
@@ -145,8 +147,7 @@ h2 {
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.95) !important;
   backdrop-filter: blur(100px) saturation(2%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: 0 1px 15px rgba(87, 87, 87, 0.5);
 }
 
 .navbar .container-fluid {
@@ -727,21 +728,18 @@ footer .icon:hover {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Style pour le lien "Accéder au site" */
-.content a {
-  display: inline-block;
-  margin-top: 0;
-  padding: 0;
-  text-decoration: none;
-  font-size: 1rem;
+
+.content .link {
   width: 100%;
+  padding: 0 1rem;
+  margin-top: 0;
   text-align: right;
+  font-size: 1rem;
 }
 
 .content a svg {
   color: rgba(255, 255, 255, 0.8);
   transition: all 0.75s ease;
-  padding: 0 1rem;
 }
 
 .content a svg:hover {
