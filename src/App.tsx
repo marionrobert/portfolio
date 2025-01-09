@@ -24,7 +24,7 @@ function App() {
       <main>
         <Presentation />
         <hr />
-        {/* <GridComponent /> */}
+        <GridComponent />
         <hr />
         <Experience />
         <hr />

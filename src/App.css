@@ -225,7 +225,7 @@ section.presentation svg {
 
 /* grids START */
 .grids {
-  width: 80%;
+  max-width: 100%;
   display: flex;
   justify-content:space-around;
   flex-wrap: wrap;
