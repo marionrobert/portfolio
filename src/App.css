@@ -34,7 +34,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   font-size: 1rem;;
 	line-height: 1.25;
@@ -48,7 +47,55 @@ body {
   height: 100%;
 }
 
-/* effet ciel étoilé */
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button, a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+main {
+  padding: 3rem 1rem;
+}
+
+h2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 1.5rem 0;
+  font-size: 2rem;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-image: linear-gradient(to right,#414040, #02020200, #414040);
+  width: 90%;
+  max-width: 1300px;
+  margin: 0rem auto;
+}
+
+/* effet ciel étoilé START */
 .starry-sky {
   position: fixed;
   top: 0;
@@ -96,49 +143,10 @@ body {
   }
 }
 
-
-ol, ul {
-	list-style: none;
-}
-
-blockquote, q {
-	quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-button, a {
-  cursor: pointer;
-  text-decoration: none;
-  color: white;
-}
-
-a:hover {
-  color: white;
-}
+/* effet ciel étoilé END */
 
 
-/* global css */
-main {
-  padding: 3rem 1rem;
-}
-
-
-h2 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: 1.5rem 0;
-  font-size: 2rem;
-}
-
+/* navbar START */
 .navbar {
   background-color: transparent !important;
   transition: background-color 0.5s ease;
@@ -179,21 +187,14 @@ a.navbar-brand {
   background-color: transparent;
   padding-bottom: 0.5rem;
 }
+/* navbar END */
 
-hr {
-  border: none;
-  height: 2px;
-  background-image: linear-gradient(to right,#414040, #02020200, #414040);
-  width: 90%;
-  max-width: 1300px;
-  margin: 0rem auto;
-}
 
-/* presentation */
+/* presentation START */
 section.presentation {
   margin: 0 auto;
   max-width: 1200px;
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -219,13 +220,12 @@ section.presentation p {
 section.presentation svg {
   padding: 0 0.2rem;
 }
+/* presentation END */
 
 
-
-/* grids */
-
+/* grids START */
 .grids {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content:space-around;
   flex-wrap: wrap;
@@ -278,10 +278,10 @@ section.presentation svg {
   width: 90%;
   height: 90%;
 }
+/* grids END */
 
 
-/* Projet component */
-
+/* Projet component START */
 section.projects-container {
   margin: 0rem auto;
   max-width: 1200px;
@@ -410,9 +410,11 @@ span::before, span::after{
   background: rgba(255, 171, 157, 1);
   border-radius: 5px;
 }
+
 .description a:hover::before, .description a:hover::after{
   width: 100%;
 }
+
 .description a:hover span::before, .description a:hover span::after{
   height: 100%;
 }
@@ -422,29 +424,36 @@ span::before, span::after{
   top: 0;
   transition-duration: 0.4s;
 }
+
 .button::after{
   left: 50%;
   bottom: 0;
   transition-duration: 0.4s;
 }
+
 .button span::before{
   left: 0;
   top: 50%;
   transition-duration: 0.4s;
 }
+
 .button span::after{
   right: 0;
   top: 50%;
   transition-duration: 0.4s;
 }
+
 .button:hover::before, .button:hover::after{
   left: 0;
 }
+
 .button:hover span::before, .button:hover span::after{
   top: 0;
 }
+/* Projet component END */
 
-/* contact component */
+
+/* contact component START */
 section#contact {
   margin: 150px auto;
   padding: 0.1rem 0 2rem;
@@ -512,8 +521,9 @@ section#contact li svg {
 .cta:active {
   transform: scale(0.96);
 }
+/* contact component END */
 
-
+/* footer START */
 footer {
   padding: 0.5rem;
   background-color: rgba(0, 0, 0, 0.4);
@@ -554,7 +564,10 @@ footer .icon:hover {
   color: rgb(243, 213, 207);
 }
 
+/* footer END */
 
+
+/* Timeline START */
 .timeline-container {
   display: flex;
   justify-content: center;
@@ -728,7 +741,6 @@ footer .icon:hover {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
 .content .link {
   width: 100%;
   padding: 0 1rem;
@@ -746,6 +758,8 @@ footer .icon:hover {
   transform: scale(130%);
   color: white;
 }
+
+/* Timeline END */
 
 
 /* media queries */
@@ -854,11 +868,13 @@ footer .icon:hover {
   section.projects-container.not-mobile {
     margin: 0rem auto;
     position: relative;
+    min-height: 120vh;
   }
 
   .all-projects {
     min-height: 100vh;
     max-width: 1400px;
+    /* border: 2px solid green; */
   }
 
   section.projects-container.not-mobile div.project {
@@ -961,6 +977,11 @@ footer .icon:hover {
   .image-layout {
     width: 50%;
     height: 400px;
+  }
+
+  section.projects-container.not-mobile {
+    min-height: 70vh;
+    margin: 6rem auto;
   }
 
   .all-projects {
